@@ -1,2 +1,2 @@
 # GQQP
-Jesse is ready
+Jesse is updated ready
