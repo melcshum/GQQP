@@ -60,7 +60,7 @@
                                 <h3>Play game</h3>
                                 <p>You can play different types and topics' game here</p>
                                 <p>You can get gold here.</p>
-                                <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                                <p><a href="/Menu" class="btn btn-primary" role="button" style="float: right;">Go</a>
                             </div>
                         </div>
                     </div>

@@ -32,3 +32,7 @@ Route::post('/updateInfor', 'UserController@updateInfor');
 
 Route::get('/question', 'QuestionController@index');
 Route::get('/searchQuestion', 'QuestionController@search');
+
+Route::get('/Menu', function () {
+    return view('menu');
+});
