@@ -571,7 +571,7 @@
                     We have two mode, "Test" and "Exercise", Test mode can get the Mark and Point, but only one time for each day. And Exercise just Unlimited.
                 </p>
                 <a href="#"><button type="button" class="btn btn-info" id="LQ" name="LQ">Test</button></a>
-                <a href="rules.html"><button type="button" class="btn btn-success" id="MC" name="MC">Exercise</button></a>
+                <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Exercise</button></a>
 
             </div>
         </div>

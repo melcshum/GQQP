@@ -16,7 +16,7 @@
                         <div class="caption">
                             <h3>Goal</h3>
                             <p>show the goal of this system</p>
-                            <p><a href="rules.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                            <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                                 <h3>Play game</h3>
                                 <p>You can play different types and topics' game here</p>
                                 <p>You can get gold here.</p>
-                                <p><a href="/Menu" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                                <p><a href="/playMenu" class="btn btn-primary" role="button" style="float: right;">Go</a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                 <h3>Challenge</h3>
                                 <p>You can play challenging game here</p>
                                 <p>You can get gold and point here.</p>
-                                <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                                <p><a href="/rules" class="btn btn-primary" role="button" style="float: right;">Go</a>
                             </div>
                         </div>
                     </div>

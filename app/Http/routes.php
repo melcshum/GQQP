@@ -33,6 +33,43 @@ Route::post('/updateInfor', 'UserController@updateInfor');
 Route::get('/question', 'QuestionController@index');
 Route::get('/searchQuestion', 'QuestionController@search');
 
-Route::get('/Menu', function () {
+Route::get('/playMenu', function () {
     return view('menu');
+});
+Route::get('/gameTest', function () {
+    return view('gameTest');
+});
+
+Route::get('/rules', function () {
+    return view('rules');
+});
+
+Route::get('/challenge', function () {
+    return view('challenge');
+});
+Route::get('/skipQuestion', function () {
+    return view('skipQuestion');
+});
+Route::get('/questionResult', function () {
+    return view('questionResult');
+});
+
+Route::get('/mcQuestion', function () {
+    return view('mcQuestion');
+});
+
+Route::get('/mcResult', function () {
+    return view('mcResult');
+});
+
+Route::get('/question20', function () {
+    return view('question20');
+});
+
+Route::get('/lastQuestion', function () {
+    return view('lastQuestion');
+});
+
+Route::get('/Result', function () {
+    return view('result');
 });
