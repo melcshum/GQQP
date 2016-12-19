@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9280f8b2-8335-4c03-b7db-e45f0351ff2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_02_103606_sign_up_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_02_103606_sign_up_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_02_104929_new_question_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_02_104929_new_question_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_02_105556_student_skill_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_02_105556_student_skill_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/ifTutorual.blade.php" afterPath="$PROJECT_DIR$/resources/views/ifTutorual.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/ranking.blade.php" afterPath="$PROJECT_DIR$/resources/views/ranking.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -560,12 +553,12 @@
       <workItem from="1481990086223" duration="2364000" />
       <workItem from="1481993028288" duration="34000" />
       <workItem from="1482031531822" duration="495000" />
-      <workItem from="1482109775143" duration="2069000" />
+      <workItem from="1482109775143" duration="2189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104016000" />
+    <option name="totallyTimeSpent" value="104136000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
