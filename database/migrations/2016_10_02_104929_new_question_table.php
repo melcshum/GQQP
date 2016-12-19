@@ -29,6 +29,6 @@ class newQuestionTable extends Migration
      */
     public function down()
     {
-        Schema:: drop('newQuestion');
+        Schema:: drop('newQuestions');
     }
 }

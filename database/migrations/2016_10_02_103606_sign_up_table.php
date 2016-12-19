@@ -28,6 +28,6 @@ class SignUpTable extends Migration
      */
     public function down()
     {
-        Schema::drop('register');
+        Schema::drop('registers');
     }
 }
