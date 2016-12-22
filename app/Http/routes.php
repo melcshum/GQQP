@@ -73,3 +73,11 @@ Route::get('/lastQuestion', function () {
 Route::get('/Result', function () {
     return view('result');
 });
+
+Route::get('/ifTutorual', function () {
+    return view('ifTutorual');
+});
+
+Route::get('/ranking', function () {
+    return view('ranking');
+});

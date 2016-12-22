@@ -242,7 +242,7 @@
                 <a href="#" class="btn" style="float: left;">20</a>
             </li>
             <li>
-                <p align="right"><a href="/skipQuestion"><input type="button" class="btn btn-warning" value="Ship"></a></p>
+                <p align="right"><a href="/skipQuestion"><input type="button" class="btn btn-warning" value="Skip"></a></p>
             </li>
         </ul>
     </div>

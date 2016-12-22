@@ -49,7 +49,7 @@
                             <div class="caption">
                                 <h3>Tutorial Note</h3>
                                 <p>You can view tutorial and do pratice here</p>
-                                <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                                <p><a href="/ifTutorual" class="btn btn-primary" role="button" style="float: right;">Go</a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                             <div class="caption">
                                 <h3>Ranking</h3>
                                 <p>You can view the ranking here</p>
-                                <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                                <p><a href="/ranking" class="btn btn-primary" role="button" style="float: right;">Go</a>
                             </div>
                         </div>
                     </div>
