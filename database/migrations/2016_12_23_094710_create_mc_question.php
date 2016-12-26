@@ -18,6 +18,7 @@ class CreateMcQuestion extends Migration
             $table->string('question_type', 20);
             $table->integer('question_level');
             $table->string('question', 1000);
+            $table->string('program', 2000);
             $table->string('question_ans', 1);
             $table->string('mc_ans1', 100);
             $table->string('mc_ans2', 100);

@@ -14,8 +14,7 @@
             height:300px;
         }
         pre.joe{
-            padding-left: 1.8em
-        }
+            padding-left: 1.8em }
         #Question{
             background-color: #f5f5f5;
             border: 1px solid #ccc;
@@ -27,6 +26,9 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             float: none;
+        }
+        #Test123{
+            display: table;
         }
 
         #Mainp [class*="col-"] {
@@ -52,6 +54,9 @@
         }
         .jst-timeout {
             color: red;
+        }
+        #Mc{
+            width: 80%;
         }
 
     </style>
@@ -120,7 +125,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Gold:<u>0</u></label>    <label>Type:class</label>    <label>Level:<u>1</u></label>    <label>Timer: </label><label id="my">0</label> : <label id="sy">0</label></h4></center></pre>
+                <pre class="joe"><center><h4><label>Gold:<u>0</u></label>    <label>Knowledge:<u>0</u></label>    <label>Type:class</label>    <label>Level:<u>1</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left="60"> </label></h4></center></pre>
             </div>
         </div>
     </div>
@@ -129,6 +134,14 @@
         <tr>
             <td>
                 <img src="./images/the-meaning-of-D.jpg">
+            </td>
+            <td>
+                x1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./images/50-50-movie_61.jpg">
             </td>
             <td>
                 x1
@@ -146,34 +159,44 @@
     <div class="container">
 
         <div id="Mainp"class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <h3><label>1</label>/20</h3>
-                <div id="Question" class="col-md-4 col-sm-4 col-xs-4">
-                    <h2>Question</h2>
-                    <p><label>Create Hello class and have a main class to print "Hello class":</label></p>
-                    <hr>
-                    <h2>Output</h2>
-                    <img src="./images/ans1.JPG">
-                    <hr>
-                    <ol id="hits">
-                        <li>Class name</li>
-                        <li>about the main class</li>
-                        <li>about the main class</li>
-                        <li>about the main class</li>
-                        <li>java basic library to print</li>
-                    </ol>
-                </div>
+            <h3><label>2</label>/20</h3>
+            <div id="Test123" class="col-md-12 col-sm-12 col-xs-12">
+            <div id="Question" class="col-md-4 col-sm-4 col-xs-4">
+                <h2>Question</h2>
+                <p><label>{!!(array_get($mc[0], 'attributes.question'))!!}</label></p>
+                <hr>
+                <h2>Output</h2>
+                <img src="./images/ans2.JPG">
+                <hr>
+                <ol id="hits">
+                    <li>here are 7 line</li>
+                    <li>The first line will print 7 * in line1</li>
+                    <li>The second line will print 6 * in line2</li>
+                </ol>
+            </div>
 
-                <div id="Answer" class="col-md-8 col-sm-8 col-xs-8">
-                    <h2>Answer</h2>
-                    <pre>public class 1.<input type="text">{
-	public 2. <input type="text"> 3.<input type="text"> 4.<input type="text">(String [] args){
-		5.<input type="text">.print("Hello class");
-	}
-}
-</pre>
-                    <p id="test"align="right" valign="bottom"><a href="questionResult.html"><input type="button" id="Next" class="btn btn-primary" value="Next"></a></p>
-                </div>
+            <div id="Answer" class="col-md-8 col-sm-8 col-xs-8">
+                <h2>Answer</h2>
+                {!!(array_get($mc[0], 'attributes.program'))!!}
+                <table id="Mc">
+                    <tr>
+                        <td>
+                            <input type="radio">a.<p>(i=0;i<=6;i++)</p>
+                            <p>(j=0;j<=7-i;j++)</p>
+                            <input type="radio">b.<p>(i=0;i<=6;i++)</p>
+                            <p>(j=0;j<=7-i;j++)</p>
+                        </td>
+                        <td>
+                            <input type="radio">c.<p>(i=0;i<=6;i++)</p>
+                            <p>(j=0;j<=7-i;j++)</p>
+                            <input type="radio">d.<p>(i=0;i<=6;i++)</p>
+                            <p>(j=0;j<=7-i;j++)</p>
+                        </td>
+                    </tr>
+
+                </table>
+                <p id="test"align="right" valign="bottom"><a href="/mcResult"><input type="button" id="Next" class="btn btn-primary" value="Next"></a></p>
+            </div>
             </div>
         </div>
         <!-- /.row -->
@@ -182,11 +205,11 @@
         <ul class="nav" id="side-menu">
 
             <li>
-                <a href="#" class="btn active" style="float: left;">01</a>
+                <a href="#" class="btn" style="float: left;">01</a>
             </li>
 
             <li>
-                <a href="q2.html" class="btn" style="float: left;">02</a>
+                <a href="q2.html" class="btn active" style="float: left;">02</a>
             </li>
             <li>
                 <a href="q3.html" class="btn" style="float: left;">03</a>
@@ -244,7 +267,7 @@
                 <a href="#" class="btn" style="float: left;">20</a>
             </li>
             <li>
-                <p align="right"><a href="skipQuestion.html"><input type="button" class="btn btn-warning" value="Ship"></a></p>
+                <p align="right"><a href="/mcResult"><input type="button" class="btn btn-warning" value="Ship"></a></p>
             </li>
         </ul>
     </div>
@@ -273,32 +296,12 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
         $("#hits").hide();
-        var s =$("#sy").val();
-        var m = $("#my").val();
-        var id = setInterval(frame, 1000);
-        function frame(){
-            if(s>=5){
-                $("#hits").show();
-                s++;
-                $("#sy").text(s);
-                if(s>=60){
-                    m++;
-                    $("#my").text(m);
-                    s=0;
-                    s++;
-                    $("#sy").text(s);
-                }
-            }
-
-            else{
-                s++;
-                $("#sy").text(s);
-            }
-        }
+        $("#Next").click(function(){
+        });
     });
 </script>
-<script src="../js/jqueryTime.js"></script>
-<script src="../js/jquery.simple.timer.js"></script>
+<script src="../dist/js/jqueryTime.js"></script>
+<script src="../dist/js/jquery.simple.timer.js"></script>
 <script>
     $(function(){
 
