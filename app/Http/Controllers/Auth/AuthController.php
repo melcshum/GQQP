@@ -8,6 +8,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Database\Query;
 
 class AuthController extends Controller
 {
@@ -64,11 +65,25 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-          return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $skill = Skill::create([
+           'user_id' => $user -> id
+        ]);
+
+        $skill -> user() -> sync([$user -> id]);
+        return $user;
+
+
+//          return User::create([
+//            'name' => $data['name'],
+//            'email' => $data['email'],
+//            'password' => bcrypt($data['password']),
+//        ]);
 
 //        return Skill::create([
 //           'user_id' => $user -> id

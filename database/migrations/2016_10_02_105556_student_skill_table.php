@@ -35,6 +35,6 @@ class StudentSkillTable extends Migration
      */
     public function down()
     {
-        Schema:: drop('skill');
+        Schema:: drop('skills');
     }
 }
