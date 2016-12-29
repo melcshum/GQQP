@@ -36,6 +36,8 @@ Route::get('/searchQuestion', 'QuestionController@search');
 Route::get('/playMenu', function () {
     return view('menu');
 });
+//Route::resource('gameTest','TestController');
+
 Route::get('/gameTest', function () {
     return view('gameTest');
 });
