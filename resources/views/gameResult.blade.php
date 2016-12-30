@@ -19,19 +19,15 @@
             background-color: #f5f5f5;
             border: 1px solid #ccc;
             border-radius: 4px;
-            float: none;
         }
         #Answer{
             background-color: #f5f5f5;
             border: 1px solid #ccc;
             border-radius: 4px;
-            float: none;
-        }
-        #Test123{
-            display: table;
         }
 
         #Mainp [class*="col-"] {
+            float: none;
             display: table-cell;
             vertical-align: top;
         }
@@ -54,9 +50,6 @@
         }
         .jst-timeout {
             color: red;
-        }
-        #Mc{
-            width: 80%;
         }
 
     </style>
@@ -125,76 +118,25 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(array_get($mc[$playQuestionNum], 'attributes.question_type'))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left="60"> </label></h4></center></pre>
+                <pre class="joe"><center><h4><label>Gold:<u>{!!$gold!!}</u></label>   <label>Timer: 0:{!! $time!!}</label></h4></center></pre>
             </div>
         </div>
     </div>
-    <h3><p align="right">item</p></h3>
-    <table border="1" align="right">
-        <tr>
-            <td>
-                <img src="./images/the-meaning-of-D.jpg">
-            </td>
-            <td>
-                x1
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="./images/50-50-movie_61.jpg">
-            </td>
-            <td>
-                x1
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="./images/hO01DAyn.png">
-            </td>
-            <td>
-                x1
-            </td>
-        </tr>
-    </table>
     <div class="container">
 
         <div id="Mainp"class="row">
-            <h3><label>{!! Form::label('question_num', $playQuestionNum+1) !!}</label>/20</h3>
-            <div id="Test123" class="col-md-12 col-sm-12 col-xs-12">
-            <div id="Question" class="col-md-4 col-sm-4 col-xs-4">
-                <h2>Question</h2>
-                <p><label>{!!(array_get($mc[$playQuestionNum], 'attributes.question'))!!}</label></p>
-                <hr>
-                <h2>Output</h2>
-                <img src="./images/ans2.JPG">
-                <hr>
-                <ol id="hits">
-                    <li>here are 7 line</li>
-                    <li>The first line will print 7 * in line1</li>
-                    <li>The second line will print 6 * in line2</li>
-                </ol>
+            <h3><label>2</label>/20</h3>
+            <pre><h4>Question: {!!(array_get($mc[$playQuestionNum-1], 'attributes.question'))!!}</h4></pre>
+            <div id="Question" class="col-md-8 col-sm-8 col-xs-8">
+                <h2>Your Answer</h2>
+                {!!(array_get($mc[$playQuestionNum-1], 'attributes.program'))!!}
+                {!!$playAns!!}.{!!$ans!!}
             </div>
 
             <div id="Answer" class="col-md-8 col-sm-8 col-xs-8">
-                <h2>Answer</h2>
-                {!!(array_get($mc[$playQuestionNum], 'attributes.program'))!!}
-                <table id="Mc">
-                    {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
-                    <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
-                    <input type="hidden" id='time' name="time" value='0'>
-                    <tr>
-                        <td>
-                            <input type="radio" name="ans" value="a"/>a.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>
-                            <input type="radio" name="ans" value="b"/>b.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</p>
-                        </td>
-                        <td>
-                            <input type="radio" name="ans" value="c"/>c.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</p>
-                            <input type="radio" name="ans" value="d"/>d.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</p>
-                        </td>
-                    </tr>
-                </table>
-                <p id="test"align="right" valign="bottom"><input type="submit" id="Next" name="next" class="btn btn-primary" value="Next"></p>
-            </div>
+                <h2>Correct Answer</h2>
+                {!!(array_get($mc[$playQuestionNum-1], 'attributes.question_ans'))!!}.{!!($tureAns)!!}
+                {!!(array_get($mc[$playQuestionNum-1], 'attributes.program'))!!}
             </div>
         </div>
         <!-- /.row -->
@@ -207,7 +149,7 @@
             </li>
 
             <li>
-                <a href="q2.html" class="btn " style="float: left;">02</a>
+                <a href="q2.html" class="btn active" style="float: left;">02</a>
             </li>
             <li>
                 <a href="q3.html" class="btn" style="float: left;">03</a>
@@ -265,10 +207,13 @@
                 <a href="#" class="btn" style="float: left;">20</a>
             </li>
             <li>
-                <p align="right"><input type="submit" name="skip" id="skip" class="btn btn-warning" value="Skip"></p>
+                {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
+                <p align="right"><input type="submit" name='Next_question' class="btn btn-warning" value="Next question"></p>
+                <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
+                <input type="hidden" name="totalgold" value={!!$gold!!}>
+                {!! Form::close() !!}
             </li>
         </ul>
-        {!! Form::close() !!}
     </div>
     <!-- /#page-wrapper -->
 
@@ -295,7 +240,6 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
         $("#hits").hide();
-        $("#Next").hide();
         var s = 60;
         var id = setInterval(frame, 1000);
         function frame(){
@@ -305,20 +249,15 @@
                 s--;
             }
         }
-        $('input:radio[name="ans"]').change(function(){
-            $("#Next").show();
-        });
-        $("#Next").click(function(event){
-            $("#time").val(s);
-        });
     });
 </script>
-<script src="../dist/js/jqueryTime.js"></script>
-<script src="../dist/js/jquery.simple.timer.js"></script>
+<script src="../js/jqueryTime.js"></script>
+<script src="../js/jquery.simple.timer.js"></script>
 <script>
     $(function(){
 
         $('.timer-quick').startTimer();
+
         $('.timer').startTimer({
             onComplete: function(){
                 console.log('Complete');

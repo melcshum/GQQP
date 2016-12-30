@@ -19,15 +19,19 @@ class McQuestionSeeder extends Seeder
 
 	static void printStars(){
 		int i,j;
-		for<input type="text">{
+		for<input type="text" disabled>{
 			System.out.println("");
-			for<input type="text">{
+			for<input type="text" disabled>{
 				System.out.print("*");
 			}
 		}
 	}
 }</pre>',
-                'question_ans'=>'B','mc_ans1'=>'Queenie','mc_ans2' =>'Joe','mc_ans3'=>'John','mc_ans4'=>'Jesse','knowledge'=>10,'gold'=>100,'created_at'=>new DateTime,'updated_at'=>new DateTime],
+                'question_ans'=>'a','mc_ans1'=>'<p>(i=0;i<=6;i++)</p>
+                <p>(j=0;j<=7+i;j++)</p>','mc_ans2' =>'<p>(i=0;i<=6;i++)</p>
+                <p>(j=0;j<=7-i;j++)</p>','mc_ans3'=>'<p>(i=0;i<=6;i++)</p>
+                <p>(j=0;j<=7-i;j--)</p>','mc_ans4'=>'<p>(i=0;i<=6;i++)</p>
+                <p>(j=0;j<=7+i;j--)</p>','knowledge'=>10,'gold'=>100,'created_at'=>new DateTime,'updated_at'=>new DateTime],
 
         );
 

@@ -36,11 +36,13 @@ Route::get('/searchQuestion', 'QuestionController@search');
 Route::get('/playMenu', function () {
     return view('menu');
 });
-//Route::resource('gameTest','TestController');
+Route::resource('gameTest','TestController');
+Route::post('gameTest', 'TestController@result');
 
-Route::get('/gameTest', function () {
-    return view('gameTest');
-});
+
+//Route::get('/gameTest', function () {
+//    return view('gameTest');
+//});
 
 Route::get('/rules', function () {
     return view('rules');
