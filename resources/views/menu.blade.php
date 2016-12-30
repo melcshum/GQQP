@@ -10,59 +10,6 @@
         }
     </style>
 
-    <script type="text/javascript">
-
-        jQuery(document).ready(function($) {
-
-            $("#Topic_side1").hide();
-            $("#Topic_side_Down1").hide();
-            $("#Topic_side2").hide();
-            $("#Topic_side_Down2").hide();
-            $("#Topic_side3").hide();
-            $("#Topic_side_Down3").hide();
-
-
-
-            $("#Topic1").click(function() {
-                $("#Topic").hide(500);
-                $("#Topic_side2").hide(500);
-                $("#Topic_side_Down2").hide(500);
-                $("#Topic_side3").hide(500);
-                $("#Topic_side_Down3").hide(500);
-                $("#Topic_side1").show(500);
-                $("#Topic_side_Down1").show(500);
-
-
-            });
-
-            $("#Topic2").click(function() {
-                $("#Topic").hide(500);
-                $("#Topic_side1").hide(500);
-                $("#Topic_side_Down1").hide(500);
-                $("#Topic_side3").hide(500);
-                $("#Topic_side_Down3").hide(500);
-                $("#Topic_side2").show(500);
-                $("#Topic_side_Down2").show(500);
-
-
-            });
-
-            $("#Topic3").click(function() {
-                $("#Topic").hide(500);
-                $("#Topic_side1").hide(500);
-                $("#Topic_side_Down1").hide(500);
-                $("#Topic_side2").hide(500);
-                $("#Topic_side_Down2").hide(500);
-                $("#Topic_side3").show(500);
-                $("#Topic_side_Down3").show(500);
-
-
-            });
-
-        });
-
-    </script>
-
 </head>
 
 <body>
@@ -424,5 +371,75 @@
 
 @endsection
 </body>
+
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../vendor/raphael/raphael.min.js"></script>
+<script src="../vendor/morrisjs/morris.min.js"></script>
+<script src="../data/morris-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+<script type="text/javascript" src="../js/jquery-1.6.js"></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function($) {
+
+        $("#Topic_side1").hide();
+        $("#Topic_side_Down1").hide();
+        $("#Topic_side2").hide();
+        $("#Topic_side_Down2").hide();
+        $("#Topic_side3").hide();
+        $("#Topic_side_Down3").hide();
+
+
+
+        $("#Topic1").click(function() {
+            $("#Topic").hide(500);
+            $("#Topic_side2").hide(500);
+            $("#Topic_side_Down2").hide(500);
+            $("#Topic_side3").hide(500);
+            $("#Topic_side_Down3").hide(500);
+            $("#Topic_side1").show(500);
+            $("#Topic_side_Down1").show(500);
+
+
+        });
+
+        $("#Topic2").click(function() {
+            $("#Topic").hide(500);
+            $("#Topic_side1").hide(500);
+            $("#Topic_side_Down1").hide(500);
+            $("#Topic_side3").hide(500);
+            $("#Topic_side_Down3").hide(500);
+            $("#Topic_side2").show(500);
+            $("#Topic_side_Down2").show(500);
+
+
+        });
+
+        $("#Topic3").click(function() {
+            $("#Topic").hide(500);
+            $("#Topic_side1").hide(500);
+            $("#Topic_side_Down1").hide(500);
+            $("#Topic_side2").hide(500);
+            $("#Topic_side_Down2").hide(500);
+            $("#Topic_side3").show(500);
+            $("#Topic_side_Down3").show(500);
+
+
+        });
+
+    });
+
+</script>
 
 </html>
