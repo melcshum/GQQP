@@ -54,15 +54,15 @@
                 <ul class="nav" id="Topic_side2">
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Topice Introduction</div>
+                            <div class="panel-heading text-center" >Topic Introduction</div>
                             <div class="panel-body text-center">
-                                Topic Two Is Awarry
+                                Topic Two Is Arrary
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >How many Qusetion you finish</div>
+                            <div class="panel-heading text-center" >How many Question you finish</div>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                                     <div class="text-center">12/12</div>
@@ -75,7 +75,7 @@
                 <ul class="nav" id="Topic_side3">
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Topice Introduction</div>
+                            <div class="panel-heading text-center" >Topic's  Introduction</div>
                             <div class="panel-body text-center">
                                 Topic Three Control Characters
                             </div>
@@ -83,7 +83,7 @@
                     </li>
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >How many Qusetion you finish</div>
+                            <div class="panel-heading text-center" >How many Question you finish</div>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
                                     <div class="text-center">1/12</div>
@@ -119,7 +119,7 @@
                     <li>
 
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Suggwst finsih time</div>
+                            <div class="panel-heading text-center" >Suggest finish time</div>
                             <div class="panel-body text-center">
                                 20 minute
                             </div>
