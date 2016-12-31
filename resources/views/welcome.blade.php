@@ -55,17 +55,6 @@
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail"><br>
-                            <i class="fa fa-gamepad" aria-hidden="true" style="font-size:60px;"></i>
-                            <div class="caption">
-                                <h3>Play game</h3>
-                                <p>You can play different types and topics' game here</p>
-                                <p>You can get gold here.</p>
-                                <p><a href="/playMenu" class="btn btn-primary" role="button" style="float: right;">Go</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail"><br>
                             <i class="fa fa-paper-plane" aria-hidden="true" style="font-size:60px;"></i>
                             <div class="caption">
                                 <h3>Challenge</h3>

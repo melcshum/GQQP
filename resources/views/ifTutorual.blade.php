@@ -69,8 +69,8 @@
                                         </p>
                                         <h4><a href="#">Practice 1</a>
                                         </h4>
-                                        <button type="button" class="btn btn-primary pull-right" >Play</button>
-                                        <p>簡介</p>
+                                        <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Play</a>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
@@ -90,8 +90,8 @@
                                         </p>
                                         <h4><a href="#">Practice 2</a>
                                         </h4>
-                                        <button type="button" class="btn btn-primary pull-right disabled" >Play</button>
-                                        <p>簡介</p>
+                                        <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Play</a>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
@@ -111,8 +111,8 @@
                                         </p>
                                         <h4><a href="#">Practice 3</a>
                                         </h4>
-                                        <button type="button" class="btn btn-primary pull-right disabled" >Play</button>
-                                        <p>簡介</p>
+                                        <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Play</a>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
