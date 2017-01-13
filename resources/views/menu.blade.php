@@ -386,6 +386,10 @@
 <script src="../vendor/morrisjs/morris.min.js"></script>
 <script src="../data/morris-data.js"></script>
 
+<!-- star ranking-->
+<script src="../dist/js/star-rating.js"></script>
+<link rel="stylesheet" href="../dist/css/star-rating.css" media="all" type="text/css"/>
+
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
 <script type="text/javascript" src="../js/jquery-1.6.js"></script>
