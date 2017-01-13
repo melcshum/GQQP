@@ -10,7 +10,7 @@
                         <a href="/register"><img src="./images/join.png" name="join" width="900" height="500" ></a>
                     </div>
                 <br>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="thumbnail">
                         <i class="fa fa-compass" aria-hidden="true" style="font-size:60px;color:gold"></i>
                         <div class="caption">
@@ -20,22 +20,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="thumbnail">
                         <img src="./images/Test-icon.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="90px" height="90px"/>
                         <div class="caption">
                             <h3>Why?</h3>
                             <p>Why you need to use this system</p>
-                            <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="thumbnail"><br>
-                        <i class="fa fa-users" aria-hidden="true" style="font-size:60px;"></i>
-                        <div class="caption">
-                            <h3>Extra</h3>
-                            <p>user feeback or system demo photo</p>
                             <p><a href="intro.html" class="btn btn-primary" role="button" style="float: right;">Go</a>
                         </div>
                     </div>
@@ -50,6 +40,17 @@
                                 <h3>Tutorial Note</h3>
                                 <p>You can view tutorial and do pratice here</p>
                                 <p><a href="/ifTutorual" class="btn btn-primary" role="button" style="float: right;">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="thumbnail"><br>
+                            <i class="fa fa-gamepad" aria-hidden="true" style="font-size:60px;"></i>
+                            <div class="caption">
+                                <h3>Play game</h3>
+                                <p>You can play different types and topics' game here</p>
+                                <p>You can get gold here.</p>
+                                <p><a href="/playMenu" class="btn btn-primary" role="button" style="float: right;">Go</a>
                             </div>
                         </div>
                     </div>
