@@ -356,11 +356,10 @@
                 </div>
                 <div class="modal-body">
                     <p><h4>How to play?</h4></p>
-                    <p>	When you click the "Test"and "Exercise" button, we will start this Game. This game have 20 question. If you can not be completed the question in time.<b>(when the level is high, it will more time)</b>
-                        We have two mode, "Test" and "Exercise", Test mode can get the Mark and Point, but only one time for each day. And Exercise just Unlimited.
+                    <p>	When you click the "Exam" button, we will start this Game. This game have 20 question. If you can not be completed the question in time.<b>(when the level is high, it will more time)</b>
+                         "Exam" mode can get the Gold to buy some item, it can help you solve some problem.
                     </p>
-                    <a href="#"><button type="button" class="btn btn-info" id="LQ" name="LQ">Test</button></a>
-                    <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Exercise</button></a>
+                    <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Exam</button></a>
 
                 </div>
             </div>

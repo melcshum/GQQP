@@ -25,6 +25,7 @@ class CreateFullQuestion extends Migration
             $table->string('ans5', 50)->nullable();
             $table->integer('knowledge');
             $table->integer('gold');
+            $table->string('hint',100);
             $table->string('photo',200);
             $table->timestamps();
         });

@@ -26,6 +26,7 @@ class CreateMcQuestion extends Migration
             $table->string('mc_ans4', 100);
             $table->integer('knowledge');
             $table->integer('gold');
+            $table->string('hint',100);
             $table->string('photo',200);
             $table->timestamps();
         });

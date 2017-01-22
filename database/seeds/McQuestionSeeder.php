@@ -1,3 +1,4 @@
+
 <?php
 use Illuminate\Database\Seeder;
 /**
@@ -19,9 +20,9 @@ class McQuestionSeeder extends Seeder
 
 	static void printStars(){
 		int i,j;
-		for<input type="text" disabled>{
+		for<input type="text" name="ans1" disabled >{
 			System.out.println("");
-			for<input type="text" disabled>{
+			for<input type="text" name="ans2" disabled>{
 				System.out.print("*");
 			}
 		}
@@ -31,7 +32,8 @@ class McQuestionSeeder extends Seeder
                 <p>(j=0;j<=7+i;j++)</p>','mc_ans2' =>'<p>(i=0;i<=6;i++)</p>
                 <p>(j=0;j<=7-i;j++)</p>','mc_ans3'=>'<p>(i=0;i<=6;i++)</p>
                 <p>(j=0;j<=7-i;j--)</p>','mc_ans4'=>'<p>(i=0;i<=6;i++)</p>
-                <p>(j=0;j<=7+i;j--)</p>','knowledge'=>10,'gold'=>100,'created_at'=>new DateTime,'updated_at'=>new DateTime],
+                <p>(j=0;j<=7+i;j--)</p>','knowledge'=>10,'gold'=>100,'hint'=>'<p>here are 7 line</p>
+<p>The first line will print 7 * in line1</p>.<p>The second line will print 6 * in line2</p>','img_link'=>'','created_at'=>new DateTime,'updated_at'=>new DateTime],
 
         );
 
