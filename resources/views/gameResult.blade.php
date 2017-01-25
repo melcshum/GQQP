@@ -93,7 +93,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Logout_page.html">Fill in</a>
+            <a class="navbar-brand" href="Logout_page.html">Result</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -125,18 +125,18 @@
     <div class="container">
 
         <div id="Mainp"class="row">
-            <h3><label>2</label>/20</h3>
-            <pre><h4>Question: {!!(array_get($mc[$playQuestionNum-1], 'attributes.question'))!!}</h4></pre>
+            <h3><label>{!! $playQuestionNum+1!!}</label>/20</h3>
+            <pre><h4>Question: {!!(array_get($mc[$playQuestionNum], 'attributes.question'))!!}</h4></pre>
             <div id="Question" class="col-md-8 col-sm-8 col-xs-8">
                 <h2>Your Answer</h2>
-                {!!(array_get($mc[$playQuestionNum-1], 'attributes.program'))!!}
+                {!!(array_get($mc[$playQuestionNum], 'attributes.program'))!!}
                 {!!$playAns!!}.{!!$ans!!}
             </div>
 
             <div id="Answer" class="col-md-8 col-sm-8 col-xs-8">
                 <h2>Correct Answer</h2>
-                {!!(array_get($mc[$playQuestionNum-1], 'attributes.question_ans'))!!}.{!!($tureAns)!!}
-                {!!(array_get($mc[$playQuestionNum-1], 'attributes.program'))!!}
+                {!!(array_get($mc[$playQuestionNum], 'attributes.question_ans'))!!}.{!!($tureAns)!!}
+                {!!(array_get($mc[$playQuestionNum], 'attributes.program'))!!}
             </div>
         </div>
         <!-- /.row -->
@@ -209,8 +209,8 @@
             <li>
                 {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
                 <p align="right"><input type="submit" name='Next_question' class="btn btn-warning" value="Next question"></p>
-                <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
-                <input type="hidden" name="totalgold" value={!!$gold!!}>
+                <input type="hidden" name="question_num" value={!! $playQuestionNum+=1!!}>
+                <input type="hidden" name="totalgold" value={!!$totalgold+$gold!!}>
                 {!! Form::close() !!}
             </li>
         </ul>

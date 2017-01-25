@@ -100,7 +100,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Logout_page.html">Fill in</a>
+            <a class="navbar-brand" href="Logout_page.html">Game Exam</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -125,7 +125,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(array_get($mc[$playQuestionNum], 'attributes.question_type'))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left="60"> </label></h4></center></pre>
+                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(($mc[$playQuestionNum]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left="60"> </label></h4></center></pre>
             </div>
         </div>
     </div>
@@ -182,6 +182,7 @@
                     {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
                     <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
                     <input type="hidden" id='time' name="time" value='0'>
+                    <input type="hidden"  name="totalgold" value={!! $totalgold !!}>
                     <tr>
                         <td>
                             <input type="radio" name="ans" value="a"/>a.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>

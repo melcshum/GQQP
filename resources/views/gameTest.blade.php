@@ -94,7 +94,7 @@
                     <h2>Output</h2>
                     <img src="./images/ans1.JPG">
                     <hr>
-                    <ol id="hits">
+                    <ol id="hints">
                         <li>Class name</li>
                         <li>about the main class</li>
                         <li>about the main class</li>
@@ -211,13 +211,13 @@
 <script type="text/javascript" src="../js/jquery-1.6.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
-        $("#hits").hide();
+        $("#hints").hide();
         var s =$("#sy").val();
         var m = $("#my").val();
         var id = setInterval(frame, 1000);
         function frame(){
             if(s>=5){
-                $("#hits").show();
+                $("#hints").show();
                 s++;
                 $("#sy").text(s);
                 if(s>=60){

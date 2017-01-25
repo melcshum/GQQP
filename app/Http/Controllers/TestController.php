@@ -16,13 +16,19 @@ class TestController extends Controller
 {
     private $mc;
     private $totalgold;
+    private $totalquestion;
     public function __construct()
     {
         $this->mc = Mcquestion::all();
         $this->totalgold = 0;
+        $this->totalquestion;
     }
 
     public function index(){
+        //$totalquestion = [1,2,3,4,5];
+       // $arrayList[0] = $totalquestion;
+        //$arrayList[1] = $totalquestion;
+        //dd($arrayList);
         $playQuestionNum = 0;
         $mc = $this->mc;
         $totalgold = $this->totalgold;
@@ -32,47 +38,55 @@ class TestController extends Controller
     public function result(Request $request){
         $mc = $this->mc;
         $mc_num = count($mc);
-        $playQuestionNum = $request->input('question_num')-1;
-        if(($playQuestionNum>=$mc_num)){
-           return $this->finish();
-        }
+        $playQuestionNum = $request->input('question_num');
         if(Input::get('Next_question')){
-        $playQuestionNum = $request->input('question_num')-1;
+            if(($playQuestionNum>=$mc_num)){
+                $this->totalgold= $this->totalgold+$request->input('totalgold');
+                $totalgold = $this->totalgold;
+                return $this->finish( $totalgold);
+            }
+        $playQuestionNum = $request->input('question_num');//get the number of now do question number
         $this->totalgold= $this->totalgold+$request->input('totalgold');
         $totalgold = $this->totalgold;
         $mc = $this->mc;
+        $questionResult = [['']];
         return view('gameTest1',compact('mc','playQuestionNum','totalgold'));
         }
+
         $mc = $this->mc;
         //dd(Auth::user()->id);
         $time = $request->input('time');
-        $playQuestionNum = $request->input('question_num');//which questionNum
-        $tureAns = $this->getDbAns(($mc[$playQuestionNum - 1]['attributes']['question_ans']), $playQuestionNum - 1);//the mc ans
+        $playQuestionNum = $request->input('question_num')-1;//which questionNum
+        $tureAns = $this->getDbAns(($mc[$playQuestionNum]['attributes']['question_ans']), $playQuestionNum);//the mc ans
         if (Input::get('skip')) {
+            $this->totalgold= $this->totalgold+$request->input('totalgold');
+            $totalgold = $this->totalgold;
             $playAns = 'Null';//player choose ans
             $ans = "you skip the question";
             $gold = 0;
             $time = 0;
-            return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time'));
+            return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time','totalgold'));
         } elseif (Input::get('next')) {
             $playAns = $request->input('ans');//player choose ans
-            if ($playAns == $mc[$playQuestionNum - 1]['attributes']['question_ans']) {
-                $gold = ($mc[$playQuestionNum - 1]['attributes']['gold']);
+            $this->totalgold= $this->totalgold+$request->input('totalgold');
+            $totalgold = $this->totalgold;
+            if ($playAns == $mc[$playQuestionNum]['attributes']['question_ans']) {
+                $gold = ($mc[$playQuestionNum]['attributes']['gold']);
             } else {
                 $gold = 0;
             }
             if ($playAns == 'a') {
-                $ans = ($mc[$playQuestionNum - 1]['attributes']['mc_ans1']);
-                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time'));
+                $ans = ($mc[$playQuestionNum]['attributes']['mc_ans1']);
+                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time','totalgold'));
             } elseif ($playAns == 'b') {
-                $ans = ($mc[$playQuestionNum - 1]['attributes']['mc_ans2']);
-                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time'));
+                $ans = ($mc[$playQuestionNum]['attributes']['mc_ans2']);
+                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time','totalgold'));
             } elseif ($playAns == 'c') {
-                $ans = ($mc[$playQuestionNum - 1]['attributes']['mc_ans3']);
-                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time'));
+                $ans = ($mc[$playQuestionNum]['attributes']['mc_ans3']);
+                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time','totalgold'));
             } elseif ($playAns == 'd') {
-                $ans = ($mc[$playQuestionNum - 1]['attributes']['mc_ans4']);
-                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time'));
+                $ans = ($mc[$playQuestionNum]['attributes']['mc_ans4']);
+                return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time','totalgold'));
             }
             //if(Input::get('ship')) {
             //    return "Yes";
@@ -104,7 +118,7 @@ class TestController extends Controller
         return $qAns;
     }
 
-    public function finish(){
-        return 'finish';
+    public function finish($totalgold){
+        return $totalgold;
     }
 }
