@@ -74,160 +74,19 @@
                     <th>Question</th>
                     <th>Result</th>
                     <th>Gold</th>
-                    <th>Knowledge</th>
                     <th>Finish Time</th>
                 </tr>
                 <tbody>
+                 @for($i=0;$i<count($totalquestionresult);$i++)
                 <tr>
-                    <td>1</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>131</td>
-                    <td>10</td>
-                    <td>0:30</td>
+                    <td>{!! $totalquestionresult[0][0]['Question'] !!}</td>
+                    <td>{!! $totalquestionresult[0][0]['Result'] !!}</td>
+                    <td>{!! $totalquestionresult[0][0]['Gold'] !!}</td>
+                    <td>{!! $totalquestionresult[0][0]['Finish Time'] !!}</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>120</td>
-                    <td>10</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>111</td>
-                    <td>10</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>100</td>
-                    <td>10</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>150</td>
-                    <td>10</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>180</td>
-                    <td>12</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>100</td>
-                    <td>11</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>100</td>
-                    <td>14</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>101</td>
-                    <td>11</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>111</td>
-                    <td>11</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td><font color="red">False</font></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>130</td>
-                    <td>11</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td><font color="red">False</font></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>140</td>
-                    <td>12</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td><font color="red">False</font></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td><font color="red">False</font></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>100</td>
-                    <td>11</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td><font color="red">False</font></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td><font color="red">False</font></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td><font color="green">Ture</font></td>
-                    <td>100</td>
-                    <td>15</td>
-                    <td>0:30</td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <center>Total Gold:1400</center>
-                    </td>
-                <tr>
-                <tr>
-                    <td colspan="5">
-                        <center>Total Finish Time:7:15</center>
-                    </td>
-                <tr>
+
+                 @endfor
+
                 </tbody>
                 </thead>
             </table>

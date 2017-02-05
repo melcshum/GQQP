@@ -74,9 +74,7 @@ Route::get('/lastQuestion', function () {
     return view('lastQuestion');
 });
 
-Route::get('/Result', function () {
-    return view('result');
-});
+Route::post('Result', 'TestController@finish');
 
 Route::get('/ifTutorual', function () {
     return view('ifTutorual');

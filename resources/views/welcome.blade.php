@@ -35,7 +35,7 @@
                 @else
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail"><br>
-                            <i class="fa fa-book" aria-hidden="true" style="font-size:60px;"></i>
+                            <font color="#003D79"> <i class="fa fa-book" aria-hidden="true" style="font-size:60px;"></i></font>
                             <div class="caption">
                                 <h3>Tutorial Note</h3>
                                 <p>You can view tutorial and do pratice here</p>
