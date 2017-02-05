@@ -78,10 +78,22 @@ Route::get('/Result', function () {
     return view('result');
 });
 
-Route::get('/ifTutorual', function () {
+Route::get('/tutorial/conditional', function () {
     return view('ifTutorual');
 });
 
 Route::get('/ranking', function () {
     return view('ranking');
+});
+
+Route::get('/tutorial', function(){
+    return view('tutorialMenu');
+});
+
+Route::get('/tutorial/array', function(){
+    return view('arrayTutorial');
+});
+
+Route::get('/tutorial/loop', function(){
+    return view('loopTutorial');
 });
