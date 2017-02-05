@@ -58,7 +58,14 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
+                @if(Auth::guest())
 
+                @else
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/home') }}">Home</a></li>
+                        <li><a href="{{ url('/question') }}">Question</a></li>
+                    </ul>
+                @endif
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -78,10 +85,17 @@
                             </ul>
                         </li>
                 @endif
+                </ul>
 
             </div>
      <!--   </div> -->
+        <div class="col-md-1 col-sm-1 col-xs-1">
+            </div>
+        <div class="col-md-10 col-sm-10 col-xs-10">
         @yield('content')
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-1">
+        </div>
     </nav>
 
     </div>

@@ -1,7 +1,11 @@
 @extends("layouts.app")
 
 @section('content')
+    <div class="col-md-1">
 
+    </div>
+
+    <div class="col-md-10">
     <div id="page-wrapper">
         <div class="row">
             <h1 class="page-header">Setting</h1>
@@ -47,12 +51,12 @@
                             <input class="form-control" value="{{ Auth::user()->name }}" type="text">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Password:</label>
-                        <div class="col-md-8">
-                            <input class="form-control" value="{{ Auth::user()->password }}" type="text">
-                        </div>
-                    </div>
+                    {{--<div class="form-group">--}}
+                        {{--<label class="col-md-3 control-label">Password:</label>--}}
+                        {{--<div class="col-md-8">--}}
+                            {{--<input class="form-control" value="{{ Auth::user()->password }}" type="text">--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </form>
             </div>
         </div>
@@ -61,6 +65,10 @@
 
     </div>
     <!-- /#wrapper -->
+    </div>
+
+    <div class="col-md-1">
+        </div>
 
     <svg width="0" height="0">
         <defs>

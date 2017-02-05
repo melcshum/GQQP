@@ -27,11 +27,13 @@ class User extends Authenticatable
 
     public function skill()
     {
-        return $this->hasOne('App\Skill');
+        return $this->hasOne('App\Skill', 'userskill');
     }
 
     public function question(){
         return $this->hasMany('App\Question');
     }
+
+
 
 }
