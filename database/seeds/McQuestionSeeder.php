@@ -10,7 +10,7 @@ use Illuminate\Database\Seeder;
 class McQuestionSeeder extends Seeder
 {
     public function run(){
-        DB::table('mcquestions')->delete();
+        DB::table('mcQuestions')->delete();
 
         $mcquestions = array(
             ['question_id'=>1, 'teacher_id'=>1,'question_type'=>'if_else','question_level'=>1,'question'=>'Write a Java program by using two for loops to product the output shown below:','program'=>'<pre>public class star{
@@ -54,6 +54,6 @@ class McQuestionSeeder extends Seeder
 
         );
 
-        DB::table('mcquestions')->insert($mcquestions);
+        DB::table('mcQuestions')->insert($mcquestions);
     }
 }

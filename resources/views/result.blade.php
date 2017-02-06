@@ -79,10 +79,10 @@
                 <tbody>
                  @for($i=0;$i<count($totalquestionresult);$i++)
                 <tr>
-                    <td>{!! $totalquestionresult[0][0]['Question'] !!}</td>
-                    <td>{!! $totalquestionresult[0][0]['Result'] !!}</td>
-                    <td>{!! $totalquestionresult[0][0]['Gold'] !!}</td>
-                    <td>{!! $totalquestionresult[0][0]['Finish Time'] !!}</td>
+                    <td>{!! $totalquestionresult[$i][$i]['Question'] !!}</td>
+                    <td>{!! $totalquestionresult[$i][$i]['Result'] !!}</td>
+                    <td>{!! $totalquestionresult[$i][$i]['Gold'] !!}</td>
+                    <td>{!! $totalquestionresult[$i][$i]['Finish Time'] !!}</td>
                 </tr>
 
                  @endfor
