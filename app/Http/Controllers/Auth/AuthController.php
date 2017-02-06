@@ -70,11 +70,11 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        $skill = Skill::create([
+        $user->skill = Skill::create([
            'user_id' => $user -> id
         ]);
 
-        $skill -> user() -> sync([$user -> id]);
+//        $skill -> user() -> sync([$user -> id]);
         return $user;
 
 

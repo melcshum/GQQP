@@ -27,7 +27,7 @@ class User extends Authenticatable
 
     public function skill()
     {
-        return $this->hasOne('App\Skill', 'userskill');
+        return $this->hasOne(Skill::class);
     }
 
     public function question(){

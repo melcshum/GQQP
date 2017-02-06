@@ -781,6 +781,8 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'SignUpTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_02_103606_sign_up_table.php',
+        'StudentArrayStateTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_06_040302_student_arrayState_table.php',
+        'StudentIfStateTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_06_013651_student_ifState_table.php',
         'StudentLoopStateTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_05_154305_student_loopState_table.php',
         'StudentSkillTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_02_105556_student_skill_table.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',

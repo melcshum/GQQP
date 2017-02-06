@@ -516,6 +516,8 @@ return array(
     'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => $vendorDir . '/sebastian/recursion-context/src/InvalidArgumentException.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'SignUpTable' => $baseDir . '/database/migrations/2016_10_02_103606_sign_up_table.php',
+    'StudentArrayStateTable' => $baseDir . '/database/migrations/2017_02_06_040302_student_arrayState_table.php',
+    'StudentIfStateTable' => $baseDir . '/database/migrations/2017_02_06_013651_student_ifState_table.php',
     'StudentLoopStateTable' => $baseDir . '/database/migrations/2017_02_05_154305_student_loopState_table.php',
     'StudentSkillTable' => $baseDir . '/database/migrations/2016_10_02_105556_student_skill_table.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
