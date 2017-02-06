@@ -46,7 +46,7 @@ class McQuestionSeeder extends Seeder
 	}
 }</pre>',
                 'question_ans'=>'a','mc_ans1'=>'<p>(i=0;i<=6;i++)</p>
-                <p>(j=0;j<=7+i;j++)</p>','mc_ans2' =>'<p>(i=0;i<=6;i++)</p>
+                <p>(j=0;j<7-i;j++)</p>','mc_ans2' =>'<p>(i=0;i<=6;i++)</p>
                 <p>(j=0;j<=7-i;j++)</p>','mc_ans3'=>'<p>(i=0;i<=6;i++)</p>
                 <p>(j=0;j<=7-i;j--)</p>','mc_ans4'=>'<p>(i=0;i<=6;i++)</p>
                 <p>(j=0;j<=7+i;j--)</p>','knowledge'=>10,'gold'=>100,'hint'=>'<p>here are 7 line</p>

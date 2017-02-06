@@ -136,7 +136,20 @@ class TestController extends Controller
             //$table+="</tr>";
         //}
        // return $totalquestionresult;
+        $this->update($totalgold);
+        //dd(Auth::user()->id);
         return view ('Result', compact('totalquestionresult'));
     }
+
+    public function update($totalgold)
+    {
+        $gold = Auth::user()->gold + $totalgold;
+        DB::table('users')
+            ->where('id',Auth::user()->id)
+           ->update(array('gold'=>$gold));
+        //$project->update($input);
+        return 'nice';
+    }
+
 
 }
