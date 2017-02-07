@@ -100,7 +100,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Logout_page.html">Game Exam</a>
+            <a class="navbar-brand" href="Logout_page.html" >Game Exam</a>
         </div>
         <!-- /.navbar-header -->
 

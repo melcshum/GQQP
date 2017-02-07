@@ -53,11 +53,11 @@
 
 <body>
 
-<div id="wrapper">
+
 @extends('layouts.app')
 
 @section('content')
-
+    <div id="page-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -78,6 +78,7 @@
                 </tr>
                 <tbody>
                  @for($i=0;$i<count($totalquestionresult);$i++)
+                     {!! dd($totalquestionresult) !!}
                 <tr>
                     <td>{!! $totalquestionresult[$i][$i]['Question'] !!}</td>
                     <td>{!! $totalquestionresult[$i][$i]['Result'] !!}</td>
