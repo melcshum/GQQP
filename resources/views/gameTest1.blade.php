@@ -100,7 +100,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Logout_page.html">Game Exam</a>
+            <a class="navbar-brand" href="Logout_page.html" >Game Exam</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -334,34 +334,33 @@
             var donthint = $("#trueAns").val();
             var random = Math.floor(Math.random() * $('.item').length);
             if(donthint=='a'){
-                if(random==0){
+                while(random==0) {
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
                 $('.item').eq(0).show();
-            }elseif(donthint=='a')
+            }elseif(donthint=='b')
             {
-                if (random == 1) {
+                while(random==1) {
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
                 $('.item').eq(1).show();
-            }elseif(donthint=='a')
+            }elseif(donthint=='c')
             {
-                if (random == 2) {
+                while(random==2) {
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
                 $('.item').eq(2).show();
-            }elseif(donthint=='a')
+            }elseif(donthint=='d')
             {
-                if (random == 3) {
+                while(random==3) {
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
                 $('.item').eq(3).show();
             }
-
         });
         //$('#plustime').click(function(){
         //

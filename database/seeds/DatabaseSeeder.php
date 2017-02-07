@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call("McQuestionSeeder");
         $this->call("FillQuestionSeeder");
+        $this->call("ItemSeeder");
     }
 }

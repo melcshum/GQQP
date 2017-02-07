@@ -272,6 +272,7 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
 
     public static $classMap = array (
         'CreateFullQuestion' => __DIR__ . '/../..' . '/database/migrations/2016_12_23_103158_create_full_question.php',
+        'CreateItemsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_112723_create_items_table.php',
         'CreateMcQuestion' => __DIR__ . '/../..' . '/database/migrations/2016_12_23_094710_create_mc_question.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -349,6 +350,8 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+        'ItemSeeder' => __DIR__ . '/../..' . '/database/seeds/ItemSeeder.php',
+        'ItemUserTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_164920_item_user_table.php',
         'McQuestionSeeder' => __DIR__ . '/../..' . '/database/seeds/McQuestionSeeder.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',

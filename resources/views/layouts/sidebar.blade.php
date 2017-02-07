@@ -83,10 +83,10 @@
                     </li>
                 @endif
             </ul>
-            @yield('content')
+
         </div>
         <!--   </div> -->
-
+        @yield('content')
 
     </nav>
 
