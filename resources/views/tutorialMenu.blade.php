@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-    <style>
+    <style type="text/css">
         .thumbnail
         {
-            width:100px;
-            height:29px;
-            margin:5px;
-            background-color: #CCCCCC;
+            width:320px;
+            height:410px;
         }
+        /*#t1*/
+        /*{*/
+            /*background: #1ab7ea !important;*/
+        /*}*/
 
         .caption
         {
@@ -21,21 +23,25 @@
             box-shadow: 3px 3px 4px #000;
         }
 
+
     </style>
 
 </head>
 
 <body>
 
-<div id="wrapper">
+
+
     @extends('layouts.app')
 
     @section('content')
+        <div id="page-wrapper">
         <div class="col-md-4 col-sm-6 col-xs-12">
             <a href="/tutorial/conditional">
-                <div class="thumbnail"><br>
+                <div class="thumbnail" id="t1"><br>
                     <div class="caption">
                         <h1>Tutorial 1</h1>
+                        <img src="./images/t1.jpeg" name="join" width="200" height="160" >
                         <h3>Conditional Statements</h3>
                     </div>
                 </div>
@@ -43,9 +49,10 @@
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <a href="/ifTutorual">
-                <div class="thumbnail"><br>
+                <div class="thumbnail" id="t2"><br>
                     <div class="caption">
                         <h1>Tutorial 2</h1>
+                        <img src="./images/t2.jpeg" name="join" width="200" height="160" >
                         <h3>Array</h3>
                     </div>
                 </div>
@@ -53,14 +60,16 @@
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <a href="/ifTutorual">
-                <div class="thumbnail"><br>
+                <div class="thumbnail" id="t3"><br>
                     <div class="caption">
-                        <h1>Tutorial 1</h1>
+                        <h1>Tutorial 3</h1>
+                        <img src="./images/t3.jpeg" name="join" width="200" height="160" >
                         <h3>Loop</h3>
                     </div>
                 </div>
             </a>
         </div>
+
 
 </div>
 <!-- /#wrapper -->

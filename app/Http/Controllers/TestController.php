@@ -19,7 +19,7 @@ class TestController extends Controller
     private $totalgold;
     public function __construct()
     {
-        $this->mc = Mcquestion::all();
+        $this->mc = McQuestion::all();
         $this->totalgold = 0;
     }
 

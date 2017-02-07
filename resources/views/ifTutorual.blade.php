@@ -56,7 +56,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="panel-body">
-                                <img class="img-responsive" src="images/if.png" alt="">
+                                <img class="img-responsive" src="../images/if.png" alt="">
                                 <div class="panel-footer">
                                     Flow Diagram
                                 </div>

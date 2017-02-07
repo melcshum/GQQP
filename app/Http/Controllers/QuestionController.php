@@ -22,7 +22,7 @@ class QuestionController extends Controller
     public function search(){
         $search = '%'.$_POST['question_type'].'%';
 
-        $users = DB::table('newQuestion')
+        $users = DB::table('newQuestions')
             ->where('question_type' == $search)
         ->get();
     }

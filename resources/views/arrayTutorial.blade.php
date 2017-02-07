@@ -36,7 +36,7 @@
                         {{--</li>--}}
                         {{--</ol>--}}
                         <div class="col-lg-8 col-md-8 col-sm-12">
-                            <p> An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.</p>
+                            <p> An if statement can be followed by aan optional else statement, which executes when the Boolean expression is false.</p>
 
                             Syntax:
                             The syntax of an if...else is:
@@ -56,9 +56,9 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="panel-body">
-                                <img class="img-responsive" src="images/if.png" alt="">
+                                <img class="img-responsive" src="../images/objects-tenElementArray.gif" alt="">
                                 <div class="panel-footer">
-                                    Flow Diagram
+                                    An array of 10 elements.
                                 </div>
                             </div>
                         </div>

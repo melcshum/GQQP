@@ -27,16 +27,9 @@
 
     <link href="../dist/css/C_bar.css" rel="stylesheet" type="text/css">
 
-    <style>
-        .thumbnail{
-            width:300px;
-            height:300px;
-
-        }
-    </style>
 </head>
 <body id="app-layout">
-<div id="wrapper">
+<div id="wrapper" background="#000000">
 
     <nav class="navbar navbar-default navbar-static-top">
      <!--   <div class="container"> -->
