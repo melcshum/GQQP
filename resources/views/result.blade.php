@@ -82,11 +82,21 @@
                     <td>{!! $totalquestionresult[$i][$i]['Question'] !!}</td>
                     <td>{!! $totalquestionresult[$i][$i]['Result'] !!}</td>
                     <td>{!! $totalquestionresult[$i][$i]['Gold'] !!}</td>
-                    <td>{!! $totalquestionresult[$i][$i]['Finish Time'] !!}</td>
+                    <td>{!! intval($totalquestionresult[$i][$i]['Finish Time']/60) !!}:{!! $totalquestionresult[$i][$i]['Finish Time']%60 !!}</td>
                 </tr>
 
                  @endfor
+                 <tr>
+                     <td colspan="4">
+                         <center>Total Gold:{!! $totalgold !!}</center>
+                     </td>
+                 </tr>
 
+                 <tr>
+                     <td colspan="4">
+                         <center>Total Time:{!! intval($totaltime/60) !!}:{!! $totaltime%60 !!}</center>
+                     </td>
+                 </tr>
                 </tbody>
                 </thead>
             </table>

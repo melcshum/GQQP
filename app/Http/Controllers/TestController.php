@@ -7,19 +7,22 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Mcquestion;
+use App\Fullquestion;
 use DB;
 use Auth;
 use Illuminate\Support\Facades\Input;
 use Session;
 
-$mc = Mcquestion::all();
+//$mc = Mcquestion::all();
 class TestController extends Controller
 {
     private $mc;
+    private $fill;
     private $totalgold;
     public function __construct()
     {
         $this->mc = McQuestion::all();
+        $this->fill = Fullquestion::all();
         $this->totalgold = 0;
     }
 
@@ -28,22 +31,24 @@ class TestController extends Controller
         //$arrayList[0] = ['name' => 'Desk' ,'price' => 100];
         //$arrayList[1] = ['name' => 'Joe' ,'price' => 90];
         //dd($arrayList[0]['name']);
+        //dd($this->fill);
         $playQuestionNum = 0;
         $mc = $this->mc;
         $totalgold = $this->totalgold;
-        Session::forget('abc');
+        Session::forget('abc');//clear session abc
         return view('gameTest1', compact('mc','playQuestionNum','totalgold'));
     }
 
     public function result(Request $request){
         $mc = $this->mc;
-        $mc_num = count($mc);
+        $mc_num = count($mc);//count the all question
         $playQuestionNum = $request->input('question_num');
-        if(Input::get('Next_question')){
-            if(($playQuestionNum>=$mc_num)){
+        if(Input::get('Next_question')){//view button in question result
+            if(($playQuestionNum>=$mc_num)){//check game is not finish
                 $this->totalgold= $this->totalgold+$request->input('totalgold');//set the totalgold
                 $totalgold = $this->totalgold;//set the totalgold
                 $totalquestionresult = Session::get('abc');
+                $this->update($totalgold);
                 //dd(Session::get('abc')[0]);
                 return $this->finish( $totalgold, $totalquestionresult);
             }
@@ -61,7 +66,7 @@ class TestController extends Controller
         $playQuestionNum = $request->input('question_num')-1;//which questionNum
 
         $tureAns = $this->getDbAns(($mc[$playQuestionNum]['attributes']['question_ans']), $playQuestionNum);//the mc ans
-        if (Input::get('skip')) {
+        if (Input::get('skip')) {//if user click skip button
             $this->totalgold= $this->totalgold+$request->input('totalgold');//set the totalgold
             $totalgold = $this->totalgold;//set the totalgold
             $playAns = 'Null';//player choose ans
@@ -71,7 +76,7 @@ class TestController extends Controller
             $totalquestiondetail[$playQuestionNum]=['Question' => $playQuestionNum+1 ,'Result' => '<i>skip</i>','Gold' =>$gold,'Finish Time' =>$time];
             Session::push('abc',$totalquestiondetail);
             return view('gameResult', compact('playAns', 'playQuestionNum', 'mc', 'ans', 'tureAns', 'gold','time','totalgold'));
-        } elseif (Input::get('next')) {
+        } elseif (Input::get('next')) { // if user choose answer the question and click next
             $playAns = $request->input('ans');//player choose ans
             $this->totalgold= $this->totalgold+$request->input('totalgold');//set the totalgold
             $totalgold = $this->totalgold;//set the totalgold
@@ -136,9 +141,12 @@ class TestController extends Controller
             //$table+="</tr>";
         //}
        // return $totalquestionresult;
-        $this->update($totalgold);
         //dd(Auth::user()->id);
-        return view ('Result', compact('totalquestionresult'));
+        $totaltime=0;
+        for($i=0;$i<count($totalquestionresult);$i++){
+            $totaltime+=$totalquestionresult[$i][$i]['Finish Time'];
+        }
+        return view ('Result', compact('totalquestionresult','totalgold','totaltime'));
     }
 
     public function update($totalgold)
@@ -150,6 +158,4 @@ class TestController extends Controller
         //$project->update($input);
         return 'nice';
     }
-
-
 }
