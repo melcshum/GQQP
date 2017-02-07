@@ -50,14 +50,8 @@
                         <div class="thumbnail"><br>
                             <font color="#003D79"> <i class="fa fa-book" aria-hidden="true" style="font-size:60px;"></i></font>
                             <div class="caption">
-<<<<<<< HEAD
-                                <h3>Tutorial Note</h3>
-                                <p>You can view tutorial and do pratice here</p>
-=======
                                 <font color="#003D79"><h3>Tutorial Note</h3></font>
                                 <font color="#003D79"><p>You can view tutorial and do pratice here</p></font>
-                                <p><a href="/tutorial" class="btn btn-primary" role="button" style="float: right;">Go</a>
->>>>>>> abe9764134a8344ed6bc5beb29546b06c469dca4
                             </div>
                         </div>
                         </a>
@@ -66,18 +60,10 @@
                         <a href="/playMenu">
                         <div class="thumbnail"><br>
                             <font color="#01814A"><i class="fa fa-gamepad" aria-hidden="true" style="font-size:60px;"></i></font>
-                            <div class="caption">
-<<<<<<< HEAD
-                                <h3>Play game</h3>
-                                <p>You can play different types and topics' game here</p>
-                                <p>You can get gold here.</p>
-=======
                                 <font color="#01814A"><h3>Play game</h3></font>
                                     <font color="#01814A"><p>You can play different types and topics' game here</p></font>
                                         <font color="#01814A"><p>You can get gold here.</p></font>
-                                <p><a href="/playMenu" class="btn btn-primary" role="button" style="float: right;">Go</a>
->>>>>>> abe9764134a8344ed6bc5beb29546b06c469dca4
-                            </div>
+
                         </div>
                         </a>
                     </div>
@@ -86,17 +72,10 @@
                         <div class="thumbnail"><br>
                             <font color="#CE0000"><i class="fa fa-paper-plane" aria-hidden="true" style="font-size:60px;"></i></font>
                             <div class="caption">
-<<<<<<< HEAD
-                                <h3>Challenge</h3>
-                                <p>You can play challenging game here</p>
-                                <p>You can get gold and point here.</p>
-=======
                                 <font color="#CE0000"><h3>Challenge</h3></font>
                                 <font color="#CE0000"><p>You can play challenging game here</p></font>
                                     <font color="#CE0000"><p>You can get gold and point here.</p></font>
-                                <p><a href="/rules" class="btn btn-primary" role="button" style="float: right;">Go</a>
->>>>>>> abe9764134a8344ed6bc5beb29546b06c469dca4
-                            </div>
+                        </div>
                         </div>
                         </a>
                     </div>
