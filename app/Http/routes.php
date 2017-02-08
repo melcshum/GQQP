@@ -80,9 +80,7 @@ Route::get('/tutorial/conditional', function () {
     return view('ifTutorual');
 });
 
-Route::get('/ranking', function () {
-    return view('ranking');
-});
+Route::get('/ranking', 'UserController@rank');
 
 Route::get('/tutorial', function(){
     return view('tutorialMenu');

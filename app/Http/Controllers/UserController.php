@@ -9,6 +9,7 @@ use App\User;
 use Auth;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class UserController extends Controller
 {
@@ -53,6 +54,11 @@ class UserController extends Controller
 
     public function changeInfor(){
         return view('changeInfor');
+    }
+
+    public function rank(){
+        $users = DB::table('users')->orderBy('knowledge', 'desc')->get();
+        return view('ranking')->with('users', $users);
     }
 
     public function updateInfor(Request $request){
