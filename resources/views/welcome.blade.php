@@ -79,29 +79,29 @@
                         </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <a href="intro.html">
-                        <div class="thumbnail"><br>
-                            <i class="fa fa-bug" aria-hidden="true" style="font-size:60px;"></i>
-                            <div class="caption">
-                                <h3>Debug tool</h3>
-                                <p>You can use debug tool here</p>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <a href="intro.html">
-                        <div class="thumbnail"><br>
-                            <i class="fa fa-users" aria-hidden="true" style="font-size:60px;"></i>
-                            <div class="caption">
-                                <h3>Forum</h3>
-                                <p>You can chat with other users here</p>
+                    {{--<div class="col-md-4 col-sm-6 col-xs-12">--}}
+                        {{--<a href="intro.html">--}}
+                        {{--<div class="thumbnail"><br>--}}
+                            {{--<i class="fa fa-bug" aria-hidden="true" style="font-size:60px;"></i>--}}
+                            {{--<div class="caption">--}}
+                                {{--<h3>Debug tool</h3>--}}
+                                {{--<p>You can use debug tool here</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4 col-sm-6 col-xs-12">--}}
+                        {{--<a href="intro.html">--}}
+                        {{--<div class="thumbnail"><br>--}}
+                            {{--<i class="fa fa-users" aria-hidden="true" style="font-size:60px;"></i>--}}
+                            {{--<div class="caption">--}}
+                                {{--<h3>Forum</h3>--}}
+                                {{--<p>You can chat with other users here</p>--}}
 
-                            </div>
-                        </div>
-                        </a>
-                    </div>
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/ranking">
                         <div class="thumbnail"><br>
@@ -111,6 +111,28 @@
                                 <p>You can view the ranking here</p>
                             </div>
                         </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="/profile">
+                            <div class="thumbnail"><br>
+                                <i class="fa fa-users" aria-hidden="true" style="font-size:60px;"></i>
+                                <div class="caption">
+                                    <h3>Profile</h3>
+                                    <p>You can view the profile here</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="/shop">
+                            <div class="thumbnail"><br>
+                                <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:60px;"></i>
+                                <div class="caption">
+                                    <h3>Shop</h3>
+                                    <p>You can use gold to buy items to use in the game here</p>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 @endif

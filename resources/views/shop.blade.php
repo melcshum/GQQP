@@ -14,6 +14,8 @@
             text-align: center;
         }
 
+
+
     </style>
 
 
@@ -68,24 +70,30 @@
             </div>
 
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <form method="post" action="{{url('/exchangeItem')}}">
+                <form method="post" action="{{url('/shop')}}">
+                    {{ csrf_field() }}
                 <table border="1" width="100%">
                     <tr>
                         <th align="center">Item name</th>
                         <th align="center">Item description</th>
                         <th align="center">Cost</th>
                     </tr>
+
+                    {{--<input type="hidden" name="itemID" value={!! $items[0]['item_id']!!}>--}}
                 <?php foreach($items as $item){ ?>
                     <tr>
-                            <h5><td align="center"><button class="btn btn-info"><?php echo $item->item_name ?></button></td>
+                            <h5>
+                                <td align="center"><button class="btn btn-info"><?php echo $item->item_name ?></button></td>
                             <td align="center">&nbsp<?php echo $item->description ?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
 
-                            <td align="center" ><button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="1">
+                            <td align="center" >
+                                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#myModal" >
                                     <span class="showPoint"><img src="./images/gold.ico" width="40"> &nbspx &nbsp<?php echo $item->price ?></span>
                                     <span class="redeem">Redeem now!</span>
-                            </button></h5>
+                            </button></td>
+                            </h5>
                     </tr>
-               <?php } ?>
+                    <?php } ?>
 
                 </table>
                 </form>

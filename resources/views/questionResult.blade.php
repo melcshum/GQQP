@@ -51,11 +51,11 @@
 </head>
 
 <body>
+@extends('layouts.app')
 
+@section('content')
 <div id="wrapper">
-    @extends('layouts.app')
 
-    @section('content')
 
     <div class="container">
         <div class="row">

@@ -96,4 +96,5 @@ Route::get('/tutorial/loop', function(){
     return view('loopTutorial');
 });
 
-Route::get('/shop', 'ItemController@show');
+Route::get('/shop', 'ItemController@index');
+Route::post('/shop', 'ItemController@exchangeItem');

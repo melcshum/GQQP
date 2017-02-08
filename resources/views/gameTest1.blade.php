@@ -90,38 +90,10 @@
 <body>
 
 <div id="wrapper">
+    @extends('layouts.app')
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="Logout_page.html" >Game Exam</a>
-        </div>
-        <!-- /.navbar-header -->
+    @section('content')
 
-        <ul class="nav navbar-top-links navbar-right">
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> joechoy123<i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a data-toggle="modal" data-target="#SignUp"><i class="fa fa-user fa-fw"></i> Leave</a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
-        </ul>
-        <!-- /.navbar-top-links -->
-
-        <!-- /.navbar-static-side -->
-    </nav>
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -275,7 +247,7 @@
 
 </div>
 <!-- /#wrapper -->
-
+@endsection
 <!-- jQuery -->
 <script src="../vendor/jquery/jquery.min.js"></script>
 

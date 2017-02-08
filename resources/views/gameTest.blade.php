@@ -51,7 +51,7 @@
 </head>
 
 <body>
-@extends('layouts.sidebar')
+@extends('layouts.app')
 
 @section('content')
 <div id="wrapper">
@@ -192,6 +192,7 @@
 </div>
 <!-- /#wrapper -->
 @endsection
+
 <!-- jQuery -->
 <script src="../vendor/jquery/jquery.min.js"></script>
 
