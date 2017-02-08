@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Skill;
+use App\Item;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -74,22 +75,6 @@ class AuthController extends Controller
            'user_id' => $user -> id
         ]);
 
-//        $skill -> user() -> sync([$user -> id]);
         return $user;
-
-
-//          return User::create([
-//            'name' => $data['name'],
-//            'email' => $data['email'],
-//            'password' => bcrypt($data['password']),
-//        ]);
-
-//        return Skill::create([
-//           'user_id' => $user -> id
-//        ]);
-//        Skill::create([
-//            'user_id' => $user -> id
-//        ]);
-//        return $user;
     }
 }

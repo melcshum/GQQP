@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call("McQuestionSeeder");
+        $this->call("FillQuestionSeeder");
+        $this->call("ItemSeeder");
     }
 }

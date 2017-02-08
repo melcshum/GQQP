@@ -100,7 +100,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Logout_page.html">Game Exam</a>
+            <a class="navbar-brand" href="Logout_page.html" >Game Exam</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -125,7 +125,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(($mc[$playQuestionNum]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left="60"> </label></h4></center></pre>
+                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(($mc[$playQuestionNum]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="my">0</label> : <label id="sy">0</label>     </h4></center></pre>
             </div>
         </div>
     </div>
@@ -141,7 +141,7 @@
         </tr>
         <tr>
             <td>
-                <img src="./images/50-50-movie_61.jpg">
+                <img id='fivefive' src="./images/50-50-movie_61.jpg">
             </td>
             <td>
                 x1
@@ -149,7 +149,7 @@
         </tr>
         <tr>
             <td>
-                <img src="./images/hO01DAyn.png">
+                <img id="plustime" src="./images/hO01DAyn.png">
             </td>
             <td>
                 x1
@@ -166,12 +166,10 @@
                 <p><label>{!!(array_get($mc[$playQuestionNum], 'attributes.question'))!!}</label></p>
                 <hr>
                 <h2>Output</h2>
-                <img src="./images/ans2.JPG">
+                <img src="{!! $mc[$playQuestionNum]->photo !!}">
                 <hr>
                 <ol id="hits">
-                    <li>here are 7 line</li>
-                    <li>The first line will print 7 * in line1</li>
-                    <li>The second line will print 6 * in line2</li>
+                    {!! $mc[$playQuestionNum]->hint !!}
                 </ol>
             </div>
 
@@ -183,14 +181,16 @@
                     <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
                     <input type="hidden" id='time' name="time" value='0'>
                     <input type="hidden"  name="totalgold" value={!! $totalgold !!}>
+                    <input type="hidden" id='qtime' name="qtime" value={!! $mc[$playQuestionNum]->time !!}>
+                    <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playQuestionNum]->question_ans !!}>
                     <tr>
                         <td>
-                            <input type="radio" name="ans" value="a"/>a.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>
-                            <input type="radio" name="ans" value="b"/>b.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</p>
+                            <p class="item"><input type="radio" id='a' name="ans" value="a"/>a.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>
+                            <p class="item"><input type="radio" id='b' name="ans" value="b"/>b.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</p>
                         </td>
                         <td>
-                            <input type="radio" name="ans" value="c"/>c.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</p>
-                            <input type="radio" name="ans" value="d"/>d.<p>{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</p>
+                            <p class="item"><input type="radio" id='c' name="ans" value="c"/>c.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</p>
+                            <p class="item"><input type="radio" id='d' name="ans" value="d"/>d.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</p>
                         </td>
                     </tr>
                 </table>
@@ -297,6 +297,80 @@
     $(document).ready(function(){
         $("#hits").hide();
         $("#Next").hide();
+        var s =$("#sy").val();
+        var m = $("#my").val();
+        var rtime=0;
+        var questiontime =$("#qtime").val();
+        var id = setInterval(frame, 1000);
+        function frame(){
+            if(s>=(questiontime/2)){
+                $("#hits").show();
+                s++;
+                rtime++;
+                $("#sy").text(s);
+                $("#time").val(s);
+                if(s>=60){
+                    m++;
+                    $("#my").text(m);
+                    s=-1;
+                    s++;
+                    rtime++;
+                    $("#sy").text(s);
+                    $("#time").val(rtime);
+                }
+            }
+
+            else{
+                s++;
+                rtime++;
+                $("#sy").text(s);
+                $("#time").val(rtime);
+            }
+        }
+        $('input:radio[name="ans"]').change(function(){
+            $("#Next").show();
+        });
+        $('#fivefive').click(function(){
+            var donthint = $("#trueAns").val();
+            var random = Math.floor(Math.random() * $('.item').length);
+            if(donthint=='a'){
+                while(random==0) {
+                    var random = Math.floor(Math.random() * $('.item').length);
+                }
+                $('.item').hide().eq(random).show();
+                $('.item').eq(0).show();
+            }elseif(donthint=='b')
+            {
+                while(random==1) {
+                    var random = Math.floor(Math.random() * $('.item').length);
+                }
+                $('.item').hide().eq(random).show();
+                $('.item').eq(1).show();
+            }elseif(donthint=='c')
+            {
+                while(random==2) {
+                    var random = Math.floor(Math.random() * $('.item').length);
+                }
+                $('.item').hide().eq(random).show();
+                $('.item').eq(2).show();
+            }elseif(donthint=='d')
+            {
+                while(random==3) {
+                    var random = Math.floor(Math.random() * $('.item').length);
+                }
+                $('.item').hide().eq(random).show();
+                $('.item').eq(3).show();
+            }
+        });
+        //$('#plustime').click(function(){
+        //
+        //});
+    });
+</script>
+<!--<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        $("#hits").hide();
+        $("#Next").hide();
         var s = 60;
         var id = setInterval(frame, 1000);
         function frame(){
@@ -313,7 +387,7 @@
             $("#time").val(s);
         });
     });
-</script>
+</script>-->
 <script src="../dist/js/jqueryTime.js"></script>
 <script src="../dist/js/jquery.simple.timer.js"></script>
 <script>

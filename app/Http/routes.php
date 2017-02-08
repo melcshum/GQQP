@@ -95,3 +95,5 @@ Route::get('/tutorial/array', function(){
 Route::get('/tutorial/loop', function(){
     return view('loopTutorial');
 });
+
+Route::get('/shop', 'ItemController@show');

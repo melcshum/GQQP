@@ -1,9 +1,9 @@
-j<?php
+<?php
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class newQuestionTable extends Migration
+class ItemUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,14 @@ class newQuestionTable extends Migration
      */
     public function up()
     {
-        Schema::create('newQuestions', function (Blueprint $table) {
-            $table->increments('question_id');
-            $table->char('question_type', 1);
+        Schema::create('item_user', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->string('question_task');
+            $table->integer('item_id')->unsigned();
+            $table->integer('numOfItem');
 
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('item_id')->references('item_id')->on('items');
         });
     }
 
@@ -29,6 +30,6 @@ class newQuestionTable extends Migration
      */
     public function down()
     {
-        Schema:: drop('newQuestions');
+        Schema::drop('item_user');
     }
 }
