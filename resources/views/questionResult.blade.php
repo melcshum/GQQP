@@ -51,9 +51,28 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 @extends('layouts.app')
 
 @section('content')
+=======
+<div id="wrong"><img src="../images/wrong.gif" width="100%" height="100%"/></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>
+ function show() {
+        document.getElementById("wrong").style.display = "block";
+         document.getElementById("wrapper").style.display = "none";
+        setTimeout("hide()", 2000);  // 5 seconds
+    }
+    function hide() {
+        document.getElementById("wrong").style.display = "none";
+         document.getElementById("wrapper").style.display = "block";
+    }
+$(document).ready(function(){
+  show();
+})
+</script>
+>>>>>>> d3dbedbc353e93c0924b23f6964c9407dd36fb81
 <div id="wrapper">
 
 

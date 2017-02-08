@@ -22,9 +22,9 @@
                 <ul class="nav" id="Topic">
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Topice Introduction</div>
+                            <div class="panel-heading text-center" >Topic Introduction</div>
                             <div class="panel-body text-center">
-                                Please Kick Show Information to know more
+                                Please Click Show Information to know more
                             </div>
                         </div>
                     </li>
@@ -34,18 +34,18 @@
                 <ul class="nav" id="Topic_side1">
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Topice Introduction</div>
+                            <div class="panel-heading text-center" >Topic Introduction</div>
                             <div class="panel-body text-center">
-                                Topic One Is IF and Else
+                                Topic 1 Is IF and Else
                             </div>
                         </div>
                     </li>
                     <li>
 
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >How many Qusetion you finish</div>
+                            <div class="panel-heading text-center" >How many Question you finish</div>
                             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                <div class="text-center">4/12</div>
+                                <div class="text-center"><div align="center">4/12</div></div>
                             </div>
                         </div>
 
@@ -56,7 +56,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center" >Topic Introduction</div>
                             <div class="panel-body text-center">
-                                Topic Two Is Arrary
+                                Topic 2 Is Arrary
                             </div>
                         </div>
                     </li>
@@ -77,7 +77,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center" >Topic's  Introduction</div>
                             <div class="panel-body text-center">
-                                Topic Three Control Characters
+                                Topic 3 Control Characters
                             </div>
                         </div>
                     </li>
@@ -170,7 +170,7 @@
                     <li>
 
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Suggwst finsih time</div>
+                            <div class="panel-heading text-center" >Suggest finsih time</div>
                             <div class="panel-body text-center">
                                 10 minute
                             </div>
@@ -221,7 +221,7 @@
                     <li>
 
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Suggwst finsih time</div>
+                            <div class="panel-heading text-center" >Suggest finsih time</div>
                             <div class="panel-body text-center">
                                 30 minute
                             </div>
@@ -262,65 +262,119 @@
                     <h1 class="page-header">Menu</h1>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail">
-                            <img src="./images/IF ELSE.png"  alt='Thumbnail' class="img-thumbnail img-responsive" width="116px" height="120px"/>
-                            <div class="caption">
-                                <h4>Topic 1 If and Else</h4>
-                                <p>You can get the point in there</p>
-                                <p><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</a>
-                                    <button id=Topic1 class="btn btn-primary">Show Information</button>
-                                    <img src="./images/Lock.jpg" width="40">
+                           
+                            <div class="caption" style="overflow:hidden; height:100%">
+                                 <table cellpadding="0" cellspacing="0" style="height:100%;" border="0" width="100%">
+                                    <tr>
+                                        <td colspan="3" align="center">
+                                         <img src="./images/IF ELSE.png"  alt='Thumbnail' class="img-thumbnail img-responsive" width="120px" height="120px"/>
+                                         </td>
+                                         </tr>
+                                    <tr>
+                                    <td colspan="3"> <h4>Topic 1 If and Else</h4></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
+                                    <td align="center" valign="bottom"><button id=Topic1 class="btn btn-primary">Show Information</button></td>
+                                    <td align="right" valign="bottom"><//img src="./images/Lock.jpg" height="40" width="40">
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="thumbnail">
+                           
+                            <div class="caption"  style="overflow:hidden; height:100%">
+                                      <table cellpadding="0" cellspacing="0" style="height:100%;" border="0" width="100%">
+                                    <tr>
+                                        <td colspan="3" align="center">
+                                          <img src="./images/Array.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="120px" height="120px"/>
+                                         </td>
+                                         </tr>
+                                    <tr>
+                                    <td colspan="3">     <h4>Topic 2 Array</h4></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
+                                    <td align="center" valign="bottom"><button id=Topic2 class="btn btn-primary">Show Information</button></td>
+                                    <td align="right" valign="bottom"> <//img src="./images/Unloack.jpg" height="40" width="40">
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="thumbnail" >
+                            <div class="caption"  style="overflow:hidden; height:100%">
+                                     <table cellpadding="0" cellspacing="0" style="height:100%;" border="0" width="100%">
+                                    <tr>
+                                        <td colspan="3" align="center">
+                                          <img src="./images/Symbol.png" alt='Thumbnail3' class="img-thumbnail img-responsive" width="120px" height="120px"/>
+                                         </td>
+                                         </tr>
+                                    <tr>
+                                    <td colspan="3"> <h4>Topic 3 Control Characters</h4></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
+                                    <td align="center" valign="bottom"><button id=Topic3 class="btn btn-primary">Show Information</button></td>
+                                    <td align="right" valign="bottom"> <//img src="./images/Lock.jpg" height="40" width="40">
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="thumbnail">
+                            <div class="caption"  style="overflow:hidden; height:100%">
+                                        <table cellpadding="0" cellspacing="0" style="height:100%;" border="0" width="100%">
+                                    <tr>
+                                        <td colspan="3" align="center">
+                                          <img src="./images/Symbol.png" alt='Thumbnail3' class="img-thumbnail img-responsive" width="120px" height="120px"/>
+                                         </td>
+                                         </tr>
+                                    <tr>
+                                    <td colspan="3"> <h4>Topic 3 Control Characters</h4></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
+                                    <td align="center" valign="bottom"><button id=Topic3 class="btn btn-primary">Show Information</button></td>
+                                    <td align="right" valign="bottom"> <//img src="./images/Lock.jpg" height="40" width="40">
+                                    </td>
+                                </tr>
+                                </table>
 
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail">
-                            <img src="./images/Array.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="50%" height="50%"/>
-                            <div class="caption">
-                                <h4>Topic 2 Array</h4>
-                                <p>Here is review Java skills</p>
-                                <p><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</a>
-                                    <button id=Topic2 class="btn btn-primary">Show Information</button>
-                                    <img src="./images/Unloack.jpg" width="40">
+                            <div class="caption"  style="overflow:hidden; height:100%">
+                                        <table cellpadding="0" cellspacing="0" style="height:100%;" border="0" width="100%">
+                                    <tr>
+                                        <td colspan="3" align="center">
+                                          <img src="./images/Symbol.png" alt='Thumbnail3' class="img-thumbnail img-responsive" width="120px" height="120px"/>
+                                         </td>
+                                         </tr>
+                                    <tr>
+                                    <td colspan="3"> <h4>Topic 3 Control Characters</h4></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
+                                    <td align="center" valign="bottom"><button id=Topic3 class="btn btn-primary">Show Information</button></td>
+                                    <td align="right" valign="bottom"> <//img src="./images/Lock.jpg" height="40" width="40">
+                                    </td>
+                                </tr>
+                                </table>
+\
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail">
-                            <img src="./images/Symbol.png" alt='Thumbnail3' class="img-thumbnail img-responsive" width="50%" height="50%"/>
-                            <div class="caption">
-                                <h4>Topic 3 Control Characters</h4>
-                                <p>Here is check your rank</p>
-                                <p><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</a>
-                                    <button id=Topic3 class="btn btn-primary">Show Information</button>
-                                    <img src="./images/Lock.jpg" width="40">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail">
-                            <img src="./images/Symbol.png" alt='Thumbnail3' class="img-thumbnail img-responsive" width="50%" height="50%"/>
-                            <div class="caption">
-                                <h4>Topic 3 Control Characters</h4>
-                                <p>Here is check your rank</p>
-                                <p><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</a>
-                                    <button id=Topic3 class="btn btn-primary">Show Information</button>
-                                    <img src="./images/Lock.jpg" width="40">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail">
-                            <img src="./images/Symbol.png" alt='Thumbnail3' class="img-thumbnail img-responsive" width="50%" height="50%"/>
-                            <div class="caption">
-                                <h4>Topic 3 Control Characters</h4>
-                                <p>Here is check your rank</p>
-                                <p><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</a>
-                                    <button id=Topic3 class="btn btn-primary">Show Information</button>
-                                    <img src="./images/Lock.jpg" width="40">
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <!-- /.row -->
@@ -356,10 +410,15 @@
                 </div>
                 <div class="modal-body">
                     <p><h4>How to play?</h4></p>
-                    <p>	When you click the "Exam" button, we will start this Game. This game have 20 question. If you can not be completed the question in time.<b>(when the level is high, it will more time)</b>
-                         "Exam" mode can get the Gold to buy some item, it can help you solve some problem.
+
+                    <p>This game contain 20 questions. If you cannot complete the question in time,it takes 0 marks.<b>(when the level is high, it will more time)</b>
+                         This mode can get Gold to buy item(Tips) in shop, it can help you solve some problem.
+
+                    <p>	When you click the "Start" button, we will start this Game. This game have 20 question. If you can not be completed the question in time.<b>(when the level is high, it will more time)</b>
+                         "Game" mode can get the Gold to buy some item, it can help you solve some problem.
+
                     </p>
-                    <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Exam</button></a>
+                    <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Start</button></a>
 
                 </div>
             </div>

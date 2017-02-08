@@ -52,6 +52,22 @@
 </head>
 
 <body>
+    <div id="correct"><img src="../images/correct.gif" width="100%" height="100%"/></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>
+ function show() {
+        document.getElementById("correct").style.display = "block";
+         document.getElementById("wrapper").style.display = "none";
+        setTimeout("hide()", 2000);  // 5 seconds
+    }
+    function hide() {
+        document.getElementById("correct").style.display = "none";
+         document.getElementById("wrapper").style.display = "block";
+    }
+$(document).ready(function(){
+  show();
+})
+</script>
 @extends('layouts.app')
 
 @section('content')
