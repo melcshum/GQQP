@@ -58,7 +58,7 @@
  function show() {
         document.getElementById("correct").style.display = "block";
          document.getElementById("wrapper").style.display = "none";
-        setTimeout("hide()", 5000);  // 5 seconds
+        setTimeout("hide()", 2000);  // 5 seconds
     }
     function hide() {
         document.getElementById("correct").style.display = "none";
