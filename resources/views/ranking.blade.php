@@ -173,10 +173,8 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
         $('tr').each(function(){
-            if($('#userID') == $('#id')){
-                alert('here');
-                $(this).addClass('self').sibling().removeClass('self');
-            }
+            $(this).addClass('self').sibling().removeClass('self');
+
         });
 //            $('table').on('click', 'tr', function(){
 //               $(this).addClass('self').sibling().removeClass('self');
