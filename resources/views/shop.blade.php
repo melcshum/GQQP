@@ -42,7 +42,7 @@
                     <table border="0" width="100%" align="right">
                         <tr>
                             <td colspan="2">
-                                <h1 class="page-header">Items Redemption</h1>
+                                <h1 class="page-header" id="item">Items Redemption</h1>
                             </td>
                             <td colspan="2" align="center">
                                 <img src="./images/2955057094021740194.png" name="aboutme" width="70" height="70" class="img-circle">
@@ -73,28 +73,47 @@
                 <form method="post" action="{{url('/shop')}}">
                     {{ csrf_field() }}
                 <table border="1" width="100%">
-                    <tr>
+                    <tr >
                         <th align="center">Item name</th>
                         <th align="center">Item description</th>
                         <th align="center">Cost</th>
                     </tr>
 
-                    {{--<input type="hidden" name="itemID" value={!! $items[0]['item_id']!!}>--}}
-                <?php foreach($items as $item){ ?>
+                    <input type="hidden" name="itemId" id="itemId" value="">
+
                     <tr>
-                            <h5>
-                                <td align="center"><button class="btn btn-info"><?php echo $item->item_name ?></button></td>
-                            <td align="center">&nbsp<?php echo $item->description ?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
 
-                            <td align="center" >
-                                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#myModal" >
-                                    <span class="showPoint"><img src="./images/gold.ico" width="40"> &nbspx &nbsp<?php echo $item->price ?></span>
-                                    <span class="redeem">Redeem now!</span>
-                            </button></td>
-                            </h5>
+                            <h5><td align="center"><button class="btn btn-info">Change Question</button></td>
+                                <td align="center">&nbsp(user can displace to another question in Challenge Mode)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                                <td align="center" ><button id="buy" name="buy" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="1">
+                                <span class="showPoint"><img src="./images/gold.ico" width="40"> &nbspx &nbsp500</span>
+                                <span class="redeem">Redeem now!</span>
+                            </button></h5>
+
                     </tr>
-                    <?php } ?>
 
+
+                    <tr>
+
+                            <h5><td align="center"><button class="btn btn-info">50/50</button></td>
+                                <td align="center">&nbsp(user can filter 2 incorrecct answer in  Challenge Mode <b>(Multiple Choice Only)</b>)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                                <td align="center"><button id="buy" name="buy" class="btn btn-danger" data-toggle="modal" data-target="#myModal2" value="2">
+                                <span class="showPoint"><img src="./images/gold.ico" width="40"> x 1000</span>
+                                <span class="redeem">Redeem now!</span>
+                            </button></h5>
+
+                    </tr>
+
+                    <tr>
+
+                            <h5> <td align="center"><button class="btn btn-info" >Extra time</button></td>
+                                <td align="center">&nbsp(user can get an extra time in the Challenge Mode)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                                <td align="center"><button id="buy" name="buy" class="btn btn-danger" data-toggle="modal" data-target="#myModal3" value="3">
+                                <span class="showPoint"><img src="./images/gold.ico" width="40"> x 2000</span>
+                                <span class="redeem">Redeem now!</span>
+                            </button></h5>
+
+                    </tr>
                 </table>
                 </form>
 
@@ -146,6 +165,15 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        $("#buy").click(function(){
+            var value = $("#buy").val();
+            $("#item").text(value);
+        });
+
+    });
+</script>
 
 </body>
 

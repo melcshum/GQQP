@@ -1,4 +1,4 @@
-1@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <style>
@@ -152,7 +152,6 @@
 
                         </center>
 
-                        {{--</div>--}}
                     </div>
                 </div>
             </div>

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
 use App\Item;
+use Illuminate\Support\Facades\Input;
 
 class ItemController extends Controller
 {
-
     public function __construct()
     {
         $this->item = Item::all();
@@ -19,14 +19,12 @@ class ItemController extends Controller
     public function index()
     {
         $items = DB::table('items')->get();
-        //dd($items[0]);
         return view('shop', compact('items'));
 
     }
 
     public function exchangeItem(Request $request){
-        $item_id = $request->input('itemID');
+        var_dump($request->get('item_id'));
 
-        dd($item_id);
     }
 }

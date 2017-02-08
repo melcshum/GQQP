@@ -56,7 +56,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="wrapper">
+    <div id="page-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -108,6 +108,11 @@
 </div>
 <!-- /#wrapper -->
 @endsection
+
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- jQuery -->
 <script src="../vendor/jquery/jquery.min.js"></script>
