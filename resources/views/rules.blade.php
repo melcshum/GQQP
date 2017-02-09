@@ -48,7 +48,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">FYP</a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                GQQP
+            </a>
             </div>
             <!-- /.navbar-header -->
 
