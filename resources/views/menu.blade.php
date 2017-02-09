@@ -409,11 +409,12 @@
                     <h4 class="modal-title">Explanation</h4>
                 </div>
                 <div class="modal-body">
-                    <p><h4>How to play?</h4></p>
-
+                    <p><h3>How to play?</h3></p>
+                    <p></p>
                     <p>This game contain 20 questions. If you cannot complete the question in time,it takes 0 marks.<b>(when the level is high, it will more time)</b>
                          This mode can get Gold to buy item(Tips) in shop, it can help you solve some problem.</p>
-                    <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Start</button></a>
+                    <a href="/gameTest"><div style="text-align: center;">
+<button type="button" class="btn btn-success" id="MC" name="MC" >Start</button></div></a>
 
                 </div>
             </div>

@@ -150,7 +150,7 @@
                                         <abc>Leaderboard was divided into 4 divisions <br><b>(platinum, gold, silver, bronze)</b> 
                                     which the top 25% of players will assign to the Platinum Division,<br>
                                     26%-50% will be Gold Division ,<br>51%-75% will be Silver Division <br>
-                                    and the others players will be Bronze Division.<br><br>Enjoy the Game!</abc>
+                                    and the others players will be Bronze Division.<br><br>Enjoy the Challenge!</abc>
                     
                     </font>
                     </div>
@@ -200,7 +200,7 @@ $(document).ready(function(){
                     <div style="text-align:center">  
                         <abc>
                          <a onclick="showHide();setTimeout(myFunction, 7500);" id="myBtn" class="btn btn-info" href="#">Start Game</a>
-                        <a href="#" class="btn btn-danger" >Cancel</a>
+                        <a href="{{ url('/') }}" class="btn btn-danger" >Cancel</a>
                        
                             </abc>
 				
