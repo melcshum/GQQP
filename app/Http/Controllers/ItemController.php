@@ -24,8 +24,10 @@ class ItemController extends Controller
     }
 
     public function exchangeItem(Request $request){
-        $item_id = $request->input('itemID');
+        $itemid = $request->input('itemId');
 
-        dd($item_id);
+        if($itemid == 1){
+            if(Item::where('email', '=', Input::get('email'))->exists());
+        }
     }
 }

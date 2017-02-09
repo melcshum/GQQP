@@ -70,7 +70,7 @@
             </div>
 
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <form method="post" action="{{url('/shop')}}">
+                {!! Form::open(array('action' => 'ItemController@exchangeItem','method' => 'post')) !!}
                     {{ csrf_field() }}
                 <table border="1" width="100%">
                     <tr >
@@ -115,7 +115,7 @@
 
                     </tr>
                 </table>
-                </form>
+                {!! Form::close() !!}
 
 
 
@@ -170,7 +170,20 @@
 
         $('#buy1').click(function(){
             var id = $('#buy1').val();
-            var itemId = $('#itemId').val(id);
+            $('#itemId').val(id);
+            alert($('#itemId').val());
+        });
+
+        $('#buy2').click(function(){
+            var id = $('#buy2').val();
+            $('#itemId').val(id);
+            alert($('#itemId').val());
+        });
+
+        $('#buy3').click(function(){
+            var id = $('#buy3').val();
+            $('#itemId').val(id);
+            alert($('#itemId').val());
         });
 
     });
