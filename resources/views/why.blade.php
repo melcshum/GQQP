@@ -16,6 +16,9 @@
 @extends('layouts.app')
 
 @section('content')
+</nav>
+
+<div id="header" align="center"><h1>Why we need to design this system?</h1></div>
 @endsection
 </body>
 

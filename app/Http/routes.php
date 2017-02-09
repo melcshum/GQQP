@@ -101,3 +101,11 @@ Route::get('/tutorial/loop', function(){
 });
 
 Route::get('/shop', 'ItemController@show');
+
+Route::get('/goal', function(){
+   return view('goal');
+});
+
+Route::get('/why', function(){
+    return view('why');
+});
