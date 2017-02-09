@@ -16,6 +16,21 @@
 @extends('layouts.app')
 
 @section('content')
+</nav>
+
+<div id="header" align="center"><img src="../images/goal.jpg" width="20%"></div>
+
+<table border="0" width="100%">
+<tr>
+	<td style="width:10%"> </td><td><img src="../images/javaimage.jpeg" width="80%" height="450px"></td>
+		<td>	<ul><li><h3>Enrich Themselves</h3></li>
+				<li><h3>Breaking Up Traditional Learning</h3></li>
+				<li><h3>Enhance Student's Learning Motivation</h3></li>
+				<li><h3>Improving Constantly</h3></li>
+				</ul></td>
+<td style="width:10%"></td>
+</tr>
+</table>
 @endsection
 </body>
 
