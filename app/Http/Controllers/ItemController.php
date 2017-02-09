@@ -24,7 +24,8 @@ class ItemController extends Controller
     }
 
     public function exchangeItem(Request $request){
-        var_dump($request->get('item_id'));
+        $item_id = $request->input('itemID');
 
+        dd($item_id);
     }
 }

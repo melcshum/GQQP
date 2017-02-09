@@ -85,7 +85,7 @@
 
                             <h5><td align="center"><button class="btn btn-info">Change Question</button></td>
                                 <td align="center">&nbsp(user can displace to another question in Challenge Mode)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-                                <td align="center" ><button id="buy" name="buy" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="1">
+                                <td align="center" ><button id="buy1" name="buy1" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="1">
                                 <span class="showPoint"><img src="./images/gold.ico" width="40"> &nbspx &nbsp500</span>
                                 <span class="redeem">Redeem now!</span>
                             </button></h5>
@@ -97,7 +97,7 @@
 
                             <h5><td align="center"><button class="btn btn-info">50/50</button></td>
                                 <td align="center">&nbsp(user can filter 2 incorrecct answer in  Challenge Mode <b>(Multiple Choice Only)</b>)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-                                <td align="center"><button id="buy" name="buy" class="btn btn-danger" data-toggle="modal" data-target="#myModal2" value="2">
+                                <td align="center"><button id="buy2" name="buy2" class="btn btn-danger" data-toggle="modal" data-target="#myModal2" value="2">
                                 <span class="showPoint"><img src="./images/gold.ico" width="40"> x 1000</span>
                                 <span class="redeem">Redeem now!</span>
                             </button></h5>
@@ -108,7 +108,7 @@
 
                             <h5> <td align="center"><button class="btn btn-info" >Extra time</button></td>
                                 <td align="center">&nbsp(user can get an extra time in the Challenge Mode)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-                                <td align="center"><button id="buy" name="buy" class="btn btn-danger" data-toggle="modal" data-target="#myModal3" value="3">
+                                <td align="center"><button id="buy3" name="buy3" class="btn btn-danger" data-toggle="modal" data-target="#myModal3" value="3">
                                 <span class="showPoint"><img src="./images/gold.ico" width="40"> x 2000</span>
                                 <span class="redeem">Redeem now!</span>
                             </button></h5>
@@ -167,9 +167,10 @@
 <script src="../dist/js/sb-admin-2.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
-        $("#buy").click(function(){
-            var value = $("#buy").val();
-            $("#item").text(value);
+
+        $('#buy1').click(function(){
+            var id = $('#buy1').val();
+            var itemId = $('#itemId').val(id);
         });
 
     });

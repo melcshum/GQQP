@@ -50,12 +50,13 @@
                                 <tbody>
                                     <?php $index = 1; ?>
                                 @foreach($users as $user){
+                                <input type="hidden" name="id" id="id" value="{{$user->id}}">
                                     <tr>
                                         <td>
                                             <?= $index; $index++ ?>
                                         </td>
                                         <td>
-                                            <label id="id" value="{{$user -> id}}">{{$user -> name}}</label>
+                                            <label>{{$user -> name}}</label>
                                         </td>
                                         <td>
                                             <label>{{$user -> knowledge}}</label>
@@ -173,7 +174,13 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
         $('tr').each(function(){
-            $(this).addClass('self').sibling().removeClass('self');
+            var userID = $('#userID').val();
+            var id = $('#id').val();
+//            alert(id);
+//            if(userID == id){
+                $(this).addClass('self').sibling().removeClass('self');
+//            }
+
 
         });
 //            $('table').on('click', 'tr', function(){
