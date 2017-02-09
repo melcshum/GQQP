@@ -49,7 +49,7 @@
                                 </thead>
                                 <tbody>
                                     <?php $index = 1; ?>
-                                @foreach($users as $user){
+                                @foreach($users as $user)
                                 <input type="hidden" name="id" id="id" value="{{$user->id}}">
                                     <tr>
                                         <td>
@@ -62,7 +62,7 @@
                                             <label>{{$user -> knowledge}}</label>
                                         </td>
                                     </tr>
-                                }
+
                                 @endforeach
                                 </tbody>
                             </table>
@@ -173,12 +173,12 @@
 <script src="../dist/js/sb-admin-2.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
-        $('tr').each(function(){
-            var userID = $('#userID').val();
-            var id = $('#id').val();
-//            alert(id);
-//            if(userID == id){
-                $(this).addClass('self').sibling().removeClass('self');
+//        $('tr').each(function(){
+//            var userID = $('#userID').val();
+//            var id = $('#id').val();
+////            alert(id);
+////            if(userID == id){
+//                $(this).addClass('self').sibling().removeClass('self');
 //            }
 
 

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Hash;
 use App\User;
 use Auth;
-use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Validator;
 use DB;
 

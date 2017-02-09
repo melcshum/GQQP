@@ -38,7 +38,11 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-
+                    @if (Session::has('message'))
+                        <div class="alert alert-danger">
+                            {{Session::get('message')}}
+                        </div>
+                    @endif
                     <table border="0" width="100%" align="right">
                         <tr>
                             <td colspan="2">
@@ -171,19 +175,16 @@
         $('#buy1').click(function(){
             var id = $('#buy1').val();
             $('#itemId').val(id);
-            alert($('#itemId').val());
         });
 
         $('#buy2').click(function(){
             var id = $('#buy2').val();
             $('#itemId').val(id);
-            alert($('#itemId').val());
         });
 
         $('#buy3').click(function(){
             var id = $('#buy3').val();
             $('#itemId').val(id);
-            alert($('#itemId').val());
         });
 
     });

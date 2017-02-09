@@ -45,7 +45,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    GQQP
+                    Gamify Programming Learning Platform
                 </a>
             </div>
 

@@ -21,6 +21,9 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->integer('knowledge')->default(0);
             $table->integer('gold')->default(0);
+            $table->integer('change')->default(0);
+            $table->integer('half')->default(0);
+            $table->integer('extra')->default(0);
         });
     }
 

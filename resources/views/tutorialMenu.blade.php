@@ -46,7 +46,7 @@
             </a>
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <a href="/ifTutorual">
+            <a href="/tutorial/array">
                 <div class="thumbnail" id="t2"><br>
                     <div class="caption">
                         <h1>Tutorial 2</h1>
@@ -57,7 +57,7 @@
             </a>
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <a href="/ifTutorual">
+            <a href="/tutorial/loop">
                 <div class="thumbnail" id="t3"><br>
                     <div class="caption">
                         <h1>Tutorial 3</h1>
