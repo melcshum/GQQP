@@ -12,8 +12,8 @@ class TutorialQuestionTable extends Migration
      */
     public function up()
     {
-        Schema::create('tutquestions', function (Blueprint $table) {
-            $table->increments('tutquestion_id');
+        Schema::create('iftutquestions', function (Blueprint $table) {
+            $table->increments('iftutquestion_id');
             $table->integer('teacher_id')->nullable();
             $table->string('question_type', 20);
             $table->string('tutquestion', 1000);
@@ -36,6 +36,6 @@ class TutorialQuestionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tutquestions');
+        Schema::drop('iftutquestions');
     }
 }

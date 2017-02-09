@@ -17,12 +17,10 @@ use Session;
 class TestController extends Controller
 {
     private $mc;
-    private $fill;
     private $totalgold;
     public function __construct()
     {
         $this->mc = McQuestion::all();
-        $this->fill = Fullquestion::all();
         $this->totalgold = 0;
     }
 
@@ -50,7 +48,7 @@ class TestController extends Controller
                 $totalquestionresult = Session::get('abc');
                 $this->update($totalgold);
                 //dd(Session::get('abc')[0]);
-                return $this->finish( $totalgold, $totalquestionresult);
+                return $this->finish( $totalgold, $totalquestionresult);//end
             }
         $playQuestionNum = $request->input('question_num');//get the number of now do question number
         $this->totalgold= $this->totalgold+$request->input('totalgold');//set the totalgold

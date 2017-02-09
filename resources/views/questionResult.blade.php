@@ -51,11 +51,6 @@
 </head>
 
 <body>
-
-@extends('layouts.app')
-
-@section('content')
-
 <div id="wrong"><img src="../images/wrong.gif" width="100%" height="100%"/></div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script>
@@ -72,9 +67,10 @@ $(document).ready(function(){
   show();
 })
 </script>
-
 <div id="wrapper">
+    @extends('layouts.app')
 
+    @section('content')
 
     <div class="container">
         <div class="row">

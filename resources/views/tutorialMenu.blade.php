@@ -39,7 +39,7 @@
                 <div class="thumbnail" id="t1"><br>
                     <div class="caption">
                         <h1>Tutorial 1</h1>
-                        <img src="./images/t1.jpg" name="join" width="200" height="160" >
+                        <img src="./images/t1.jpeg" name="join" width="200" height="160" >
                         <h3>Conditional Statements</h3>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="thumbnail" id="t2"><br>
                     <div class="caption">
                         <h1>Tutorial 2</h1>
-                        <img src="./images/t2.png" name="join" width="200" height="160" >
+                        <img src="./images/t2.jpeg" name="join" width="200" height="160" >
                         <h3>Array</h3>
                     </div>
                 </div>

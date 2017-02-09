@@ -352,6 +352,7 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
         'ItemSeeder' => __DIR__ . '/../..' . '/database/seeds/ItemSeeder.php',
+        'ItemUserTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_164920_item_user_table.php',
         'McQuestionSeeder' => __DIR__ . '/../..' . '/database/seeds/McQuestionSeeder.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
@@ -789,7 +790,7 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'TutorialQuestionTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_06_152036_tutorial_question_table.php',
-        'UserSeeder' => __DIR__ . '/../..' . '/database/seeds/UserSeeder.php',
+        'ifTutorialSeeder' => __DIR__ . '/../..' . '/database/seeds/ifTutorialSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

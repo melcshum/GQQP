@@ -55,7 +55,9 @@
 
                 @else
                     <ul class="nav navbar-nav">
-
+                        <li><a href="{{ url('/home') }}">Home</a></li>
+                        <li><a href="{{ url('/question') }}">Question</a></li>
+                        <li><a href="{{ url('/shop') }}">Shop</a></li>
                     </ul>
                 @endif
                 <!-- Right Side Of Navbar -->
