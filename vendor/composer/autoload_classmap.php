@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateArticlesTable' => $baseDir . '/database/migrations/2017_02_06_095924_create_articles_table.php',
     'CreateFullQuestion' => $baseDir . '/database/migrations/2016_12_23_103158_create_full_question.php',
     'CreateItemsTable' => $baseDir . '/database/migrations/2017_02_07_112723_create_items_table.php',
     'CreateMcQuestion' => $baseDir . '/database/migrations/2016_12_23_094710_create_mc_question.php',
@@ -524,4 +525,5 @@ return array(
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'TutorialQuestionTable' => $baseDir . '/database/migrations/2017_02_06_152036_tutorial_question_table.php',
+    'ifTutorialSeeder' => $baseDir . '/database/seeds/ifTutorialSeeder.php',
 );

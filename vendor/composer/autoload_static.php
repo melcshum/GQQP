@@ -271,6 +271,7 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
     );
 
     public static $classMap = array (
+        'CreateArticlesTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_06_095924_create_articles_table.php',
         'CreateFullQuestion' => __DIR__ . '/../..' . '/database/migrations/2016_12_23_103158_create_full_question.php',
         'CreateItemsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_112723_create_items_table.php',
         'CreateMcQuestion' => __DIR__ . '/../..' . '/database/migrations/2016_12_23_094710_create_mc_question.php',
@@ -789,6 +790,7 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'TutorialQuestionTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_06_152036_tutorial_question_table.php',
+        'ifTutorialSeeder' => __DIR__ . '/../..' . '/database/seeds/ifTutorialSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

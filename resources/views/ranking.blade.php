@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style type="text/css">
+        .self{
+            background: #F00;
+        }
+    </style>
+
+</head>
+
+<body>
 @extends("layouts.app")
 
 @section('content')
@@ -22,9 +36,10 @@
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade in active" id="Platinum">
                             <center>
-                                <h3>Platinum</h3>
+                                <label id="id">Platinum</label>
                             </center>
                             <table class="table table-striped" align="left">
+                                <input type="hidden" name="userID" id="userID" value="{{Auth::user()->id}}">
                                 <thead>
                                 <tr>
                                     <th>#</th>
@@ -33,56 +48,22 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1 <img src="./images/Gold.png"></td>
-                                    <td><b>joechoy333</b></td>
-                                    <td>4966</td>
-                                </tr>
-                                <tr>
-                                    <td>2 <img src="./images/Silver.png"></td>
-                                    <td>queenie222</td>
-                                    <td>4555</td>
-                                </tr>
-                                <tr>
-                                    <td>3 <img src="./images/Copper.png"></td>
-                                    <td>Tab555</td>
-                                    <td>4200</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>VHB21</td>
-                                    <td>4199</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>KEN001</td>
-                                    <td>4180</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>John56</td>
-                                    <td>4155</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>qwertyuiop</td>
-                                    <td>4144</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>NotebookD</td>
-                                    <td>4122</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>AMY1996</td>
-                                    <td>4080</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>RCSKYP</td>
-                                    <td>4050</td>
-                                </tr>
+                                    <?php $index = 1; ?>
+                                @foreach($users as $user){
+                                <input type="hidden" name="id" id="id" value="{{$user->id}}">
+                                    <tr>
+                                        <td>
+                                            <?= $index; $index++ ?>
+                                        </td>
+                                        <td>
+                                            <label>{{$user -> name}}</label>
+                                        </td>
+                                        <td>
+                                            <label>{{$user -> knowledge}}</label>
+                                        </td>
+                                    </tr>
+                                }
+                                @endforeach
                                 </tbody>
                             </table>
                             </center>
@@ -102,56 +83,7 @@
                                 </thead>
 
                                 <tbody>
-                                <tr>
-                                    <td>1 <img src="./images/Gold.png"></td>
-                                    <td>Alva24</td>
-                                    <td>4020</td>
-                                </tr>
-                                <tr>
-                                    <td>2 <img src="./images/Silver.png"></td>
-                                    <td>Antony</td>
-                                    <td>4001</td>
-                                </tr>
-                                <tr>
-                                    <td>3 <img src="./images/Copper.png"></td>
-                                    <td>Bill3321</td>
-                                    <td>3974</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Cliff66</td>
-                                    <td>3965</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Earl369</td>
-                                    <td>3954</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>EVA001</td>
-                                    <td>3950</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>EVA002</td>
-                                    <td>3944</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>EVA003</td>
-                                    <td>3899</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>EVA004</td>
-                                    <td>3872</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>EVA005</td>
-                                    <td>3854</td>
-                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -171,56 +103,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1 <img src="./images/Gold.png"></td>
-                                    <td>HaleBBC</td>
-                                    <td>3850</td>
-                                </tr>
-                                <tr>
-                                    <td>2 <img src="./images/Silver.png"></td>
-                                    <td>Harry1245</td>
-                                    <td>3845</td>
-                                </tr>
-                                <tr>
-                                    <td>3 <img src="./images/Copper.png"></td>
-                                    <td>Larry778</td>
-                                    <td>3843</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Matt147</td>
-                                    <td>3840</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Parker478</td>
-                                    <td>3838</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Montague55</td>
-                                    <td>3837</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Roderick48</td>
-                                    <td>3834</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Silvester36</td>
-                                    <td>3832</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>Tiffany1887</td>
-                                    <td>3830</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>Victor1266</td>
-                                    <td>3829</td>
-                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -238,56 +121,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1 <img src="./images/Gold.png"></td>
-                                    <td>Alexia26</td>
-                                    <td>3799</td>
-                                </tr>
-                                <tr>
-                                    <td>2 <img src="./images/Silver.png"></td>
-                                    <td>AndreaJ</td>
-                                    <td>3788</td>
-                                </tr>
-                                <tr>
-                                    <td>3 <img src="./images/Copper.png"></td>
-                                    <td>Edwina666</td>
-                                    <td>3784</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Evangeline347</td>
-                                    <td>3781</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>C8763</td>
-                                    <td>3777</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Hilary88</td>
-                                    <td>3774</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>KimberleyAQ</td>
-                                    <td>3771</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>LindsayAPPLE</td>
-                                    <td>3769</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>Modesty96</td>
-                                    <td>3767</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>Rosalind761</td>
-                                    <td>3761</td>
-                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -301,3 +135,60 @@
     </div>
     <!-- /#wrapper -->
 @endsection
+
+<!-- JavaScripts -->
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../vendor/raphael/raphael.min.js"></script>
+<script src="../vendor/morrisjs/morris.min.js"></script>
+<script src="../data/morris-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+<!-- C_bar JavaScript-->
+<script src="../dist/js/C_bar.js"></script>
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../vendor/raphael/raphael.min.js"></script>
+<script src="../vendor/morrisjs/morris.min.js"></script>
+<script src="../data/morris-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        $('tr').each(function(){
+            var userID = $('#userID').val();
+            var id = $('#id').val();
+//            alert(id);
+//            if(userID == id){
+                $(this).addClass('self').sibling().removeClass('self');
+//            }
+
+
+        });
+//            $('table').on('click', 'tr', function(){
+//               $(this).addClass('self').sibling().removeClass('self');
+//            });
+    });
+</script>
+
+</body>
+
+</html>

@@ -18,6 +18,16 @@ class CreateItemsTable extends Migration
             $table->string('description');
             $table->integer('price');
         });
+
+        Schema::create('item_user', function(Blueprint $table){
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->integer('item_id')->unsigned()->index();
+            $table->integer('num');
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('item_id')->references('item_id')->on('items');
+        });
     }
 
     /**
@@ -28,5 +38,6 @@ class CreateItemsTable extends Migration
     public function down()
     {
         Schema::drop('items');
+        Schema::drop('item_user');
     }
 }

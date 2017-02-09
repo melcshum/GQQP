@@ -109,101 +109,44 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Gold:<u>0</u></label>    <label>Knowledge:<u>0</u></label>    <label>Type:class</label>    <label>Level:<u>1</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left="60"> </label></h4></center></pre>
+                <pre class="joe"><center><h4>   <label>Type:{!!(($iftutorial[$tutquestion]->question_type))!!}</label>    <label>Level:<u>{!!(($iftutorial[$tutquestion]->tutquestion_level))!!}</u></label></h4></center></pre>
             </div>
         </div>
     </div>
-    <h3><p align="right">item</p></h3>
-    <table border="1" align="right">
-        <tr>
-            <td>
-                <img src="./images/the-meaning-of-D.jpg">
-            </td>
-            <td>
-                x1
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="./images/50-50-movie_61.jpg">
-            </td>
-            <td>
-                x1
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="./images/hO01DAyn.png">
-            </td>
-            <td>
-                x1
-            </td>
-        </tr>
-    </table>
     <div class="container">
 
         <div id="Mainp"class="row">
-            <h3><label>2</label>/20</h3>
             <div id="Question" class="col-md-6 col-sm-6 col-xs-6">
                 <h2>Question</h2>
-                <p><label>Write a Java program by using two for loops to product the output shown below:</label></p>
+                <p><label>{!!(($iftutorial[$tutquestion]->tutquestion))!!}</label></p>
                 <hr>
-                <h2>Output</h2>
-                <img src="./images/ans2.JPG">
-                <hr>
-                <ol id="hits">
-                    <li>here are 7 line</li>
-                    <li>The first line will print 7 * in line1</li>
-                    <li>The second line will print 6 * in line2</li>
-                </ol>
             </div>
 
             <div id="Answer" class="col-md-6 col-sm-6 col-xs-6">
                 <h2>Answer</h2>
-                <pre>public class star{
-	public static void main (String [] args){
-		printStars();
-	}
-
-	static void printStars(){
-		int i,j;
-		for<input type="text">{
-			System.out.println("");
-			for<input type="text">{
-				System.out.print("*");
-			}
-		}
-	}
-}</pre>
+                {!!(($iftutorial[$tutquestion]->program))!!}
                 <table id="Mc">
+                    {!! Form::open(array('action' => 'TutorialController@show','method' => 'post')) !!}
+                    <input type="hidden" name="numQ" value={!! $tutquestion !!}>
                     <tr>
                         <td>
-                            <input type="radio">a.<p>(i=0;i<=6;i++)</p>
-                            <p>(j=0;j<=7-i;j++)</p>
-                            <input type="radio">b.<p>(i=0;i<=6;i++)</p>
-                            <p>(j=0;j<=7-i;j++)</p>
+                            <input type="radio" name="tutans" value="a">a.<p>{!!(($iftutorial[$tutquestion]->mc_ans1))!!}</p>
+                            <input type="radio" name="tutans" value="b">b.<p>{!!(($iftutorial[$tutquestion]->mc_ans2))!!}</p>
                         </td>
                         <td>
-                            <input type="radio">c.<p>(i=0;i<=6;i++)</p>
-                            <p>(j=0;j<=7-i;j++)</p>
-                            <input type="radio">d.<p>(i=0;i<=6;i++)</p>
-                            <p>(j=0;j<=7-i;j++)</p>
+                            <input type="radio" name="tutans" value="c">c.<p>{!!(($iftutorial[$tutquestion]->mc_ans3))!!}</p>
+                            <input type="radio" name="tutans" value="d">d.<p>{!!(($iftutorial[$tutquestion]->mc_ans4))!!}</p>
                         </td>
                     </tr>
 
                 </table>
-                <p id="test"align="right" valign="bottom"><a href="/mcResult"><input type="button" id="Next" class="btn btn-primary" value="Next"></a></p>
+                <p id="test"align="right" valign="bottom"><input type="submit" id="Next" name="next" class="btn btn-primary" value="Next"></p>
+                {!! Form::close() !!}
             </div>
         </div>
         <!-- /.row -->
     </div>
-    <div class="container">
-        <ul class="nav" id="side-menu">
-            <li>
-                <p align="right"><a href="/mcResult"><input type="button" class="btn btn-warning" value="Ship"></a></p>
-            </li>
-        </ul>
-    </div>
+
     <!-- /#page-wrapper -->
 
 </div>

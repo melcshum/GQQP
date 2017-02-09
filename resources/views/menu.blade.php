@@ -412,12 +412,7 @@
                     <p><h4>How to play?</h4></p>
 
                     <p>This game contain 20 questions. If you cannot complete the question in time,it takes 0 marks.<b>(when the level is high, it will more time)</b>
-                         This mode can get Gold to buy item(Tips) in shop, it can help you solve some problem.
-
-                    <p>	When you click the "Start" button, we will start this Game. This game have 20 question. If you can not be completed the question in time.<b>(when the level is high, it will more time)</b>
-                         "Game" mode can get the Gold to buy some item, it can help you solve some problem.
-
-                    </p>
+                         This mode can get Gold to buy item(Tips) in shop, it can help you solve some problem.</p>
                     <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Start</button></a>
 
                 </div>
