@@ -36,23 +36,27 @@
                         {{--</li>--}}
                         {{--</ol>--}}
                         <div class="col-lg-8 col-md-8 col-sm-12">
-                            <p> An if statement can be followed by aan optional else statement, which executes when the Boolean expression is false.</p>
-
-                            Syntax:
-                            The syntax of an if...else is:
+                            <p> To use an array in a program, you must declare a variable to reference the array, and you must specify the type of array the variable can reference. Here is the syntax for declaring an array variable −</p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Syntax
+                                </div>
+                                <div class="panel-body">
+                        <pre>dataType[] arrayRefVar;   // preferred way.
+or
+dataType arrayRefVar[];  // works but not preferred way.</pre>
+                                </div>
+                            </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     Example
                                 </div>
                                 <div class="panel-body">
-                        <pre>if(Boolean_expression){
-    //Executes when the Boolean expression is true
-}else{
-    //Executes when the Boolean expression is false
-}</pre>
+                        <pre>double[] myList;   // preferred way.
+or
+double myList[];   // works but not preferred way.</pre>
                                 </div>
                             </div>
-                            If the boolean expression evaluates to true, then the if block of code will be executed, otherwise else block of code will be executed.
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="panel-body">
@@ -70,7 +74,7 @@
                             <div class="row">
                                 <div class="col-sm-4 col-lg-4 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/320x150" alt="">
+                                        <img class="img-responsive" src="../images/Array2.png" alt="">
                                         <div class="caption">
                                             <div class="ratings">
                                                 <p class="pull-right">
@@ -91,11 +95,11 @@
 
                                 <div class="col-sm-4 col-lg-4 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/320x150" alt="">
+                                        <img class="img-responsive" src="../images/Array2.png" alt="">
                                         <div class="caption">
                                             <div class="ratings">
                                                 <p class="pull-right">
-                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>a
                                                     <span class="glyphicon glyphicon-star"></span>
                                                     <span class="glyphicon glyphicon-star-empty"></span>
                                                     <span class="glyphicon glyphicon-star-empty"></span>
@@ -112,7 +116,7 @@
 
                                 <div class="col-sm-4 col-lg-4 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/320x150" alt="">
+                                        <img class="img-responsive" src="../images/Array2.png" alt="">
                                         <div class="caption">
                                             <div class="ratings">
                                                 <p class="pull-right">

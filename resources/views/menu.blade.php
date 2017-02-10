@@ -44,8 +44,8 @@
 
                         <div class="panel panel-default">
                             <div class="panel-heading text-center" >How many Question you finish</div>
-                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <div class="text-center"><div align="center">20/20</div></div>
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <div class="text-center"><div align="center">4/12</div></div>
                             </div>
                         </div>
 
@@ -64,8 +64,8 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center" >How many Question you finish</div>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    <div class="text-center">4/20</div>
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    <div class="text-center">12/12</div>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                 <ul class="nav" id="Topic_side3">
                     <li>
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Topic  Introduction</div>
+                            <div class="panel-heading text-center" >Topic's  Introduction</div>
                             <div class="panel-body text-center">
                                 Topic 3 Control Characters
                             </div>
@@ -85,8 +85,8 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center" >How many Question you finish</div>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                    <div class="text-center">20/20</div>
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                                    <div class="text-center">1/12</div>
                                 </div>
                             </div>
                         </div>
@@ -103,109 +103,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center" ><img src="./images/gold.ico" width="40">Gold</div>
                             <div class="panel-body text-center">
-                                100 Gold<//img src="./images/tick.png" width="20" height="20">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >How many Question</div>
-                            <div class="panel-body text-center">
-                                20
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Suggest finish time</div>
-                            <div class="panel-body text-center">
-                                20 minute
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >The Fastest Finish time</div>
-                            <div class="panel-body text-center">
-                                12 minute
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Difficulty</div>
-                            <div class="panel-body text-center">
-                                <input id="input-3"  name="input-3"  class="rating rating-loading" value="3" data-size="xs" title="" readonly>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="Topic_side_Down2" >
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" ><img src="./images/gold.ico" width="40">Gold</div>
-                            <div class="panel-body text-center">
-                                50 Gold
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >How many Question</div>
-                            <div class="panel-body text-center">
-                                20
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Suggest finish time</div>
-                            <div class="panel-body text-center">
-                                30 minute
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >The Fastest Finish time</div>
-                            <div class="panel-body text-center">
-                                26 minute
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Difficulty</div>
-                            <div class="panel-body text-center">
-                                <input id="input-3"  name="input-3"  class="rating rating-loading" value="5" data-size="xs" title="" readonly>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="Topic_side_Down3" >
-                    <li>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center" ><img src="./images/gold.ico" width="40">Gold</div>
-                            <div class="panel-body text-center">
-                                90 Gold
+                                100 Gold
                             </div>
                         </div>
                     </li>
@@ -239,7 +137,109 @@
                     <li>
 
                         <div class="panel panel-default">
-                            <div class="panel-heading text-center" >Difficulty</div>
+                            <div class="panel-heading text-center" >Bar</div>
+                            <div class="panel-body text-center">
+                                <input id="input-3"  name="input-3"  class="rating rating-loading" value="3" data-size="xs" title="" readonly>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="Topic_side_Down2" >
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" ><img src="./images/gold.ico" width="40">Gold</div>
+                            <div class="panel-body text-center">
+                                50 Gold
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >How many Question</div>
+                            <div class="panel-body text-center">
+                                20
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >Suggest finsih time</div>
+                            <div class="panel-body text-center">
+                                10 minute
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >The Fastest Finish time</div>
+                            <div class="panel-body text-center">
+                                7 minute
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >Bar</div>
+                            <div class="panel-body text-center">
+                                <input id="input-3"  name="input-3"  class="rating rating-loading" value="5" data-size="xs" title="" readonly>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="Topic_side_Down3" >
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" ><img src="./images/gold.ico" width="40">Gold</div>
+                            <div class="panel-body text-center">
+                                90 Gold
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >How many Question</div>
+                            <div class="panel-body text-center">
+                                30
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >Suggest finsih time</div>
+                            <div class="panel-body text-center">
+                                30 minute
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >The Fastest Finish time</div>
+                            <div class="panel-body text-center">
+                                33 minute
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" >Bar</div>
                             <div class="panel-body text-center">
 
 
@@ -271,7 +271,7 @@
                                          </td>
                                          </tr>
                                     <tr>
-                                    <td colspan="3"> <h4>Topic 1: If and Else</h4></td>
+                                    <td colspan="3"> <h4>Topic 1 If and Else</h4></td>
                                 </tr>
                                 <tr>
                                     <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
@@ -294,7 +294,7 @@
                                          </td>
                                          </tr>
                                     <tr>
-                                    <td colspan="3">     <h4>Topic 2: Array</h4></td>
+                                    <td colspan="3">     <h4>Topic 2 Array</h4></td>
                                 </tr>
                                 <tr>
                                     <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
@@ -316,7 +316,7 @@
                                          </td>
                                          </tr>
                                     <tr>
-                                    <td colspan="3"> <h4>Topic 3: Control Characters</h4></td>
+                                    <td colspan="3"> <h4>Topic 3 Control Characters</h4></td>
                                 </tr>
                                 <tr>
                                     <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
@@ -338,7 +338,7 @@
                                          </td>
                                          </tr>
                                     <tr>
-                                    <td colspan="3"> <h4>Topic 3: Control Characters</h4></td>
+                                    <td colspan="3"> <h4>Topic 3 Control Characters</h4></td>
                                 </tr>
                                 <tr>
                                     <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
@@ -361,7 +361,7 @@
                                          </td>
                                          </tr>
                                     <tr>
-                                    <td colspan="3"> <h4>Topic 3: Control Characters</h4></td>
+                                    <td colspan="3"> <h4>Topic 3 Control Characters</h4></td>
                                 </tr>
                                 <tr>
                                     <td align="left" valign="bottom"><a data-toggle="modal" data-target="#Explanation" class="btn btn-primary" role="button">Play</td>
@@ -409,12 +409,11 @@
                     <h4 class="modal-title">Explanation</h4>
                 </div>
                 <div class="modal-body">
-                    <p><h3>How to play?</h3></p>
-                    <p></p>
+                    <p><h4>How to play?</h4></p>
+
                     <p>This game contain 20 questions. If you cannot complete the question in time,it takes 0 marks.<b>(when the level is high, it will more time)</b>
                          This mode can get Gold to buy item(Tips) in shop, it can help you solve some problem.</p>
-                    <a href="/gameTest"><div style="text-align: center;">
-<button type="button" class="btn btn-success" id="MC" name="MC" >Start</button></div></a>
+                    <a href="/gameTest"><button type="button" class="btn btn-success" id="MC" name="MC">Start</button></a>
 
                 </div>
             </div>

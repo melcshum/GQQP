@@ -23,6 +23,7 @@ class CreateItemsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->integer('item_id')->unsigned()->index();
+            $table->integer('num');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('item_id')->references('item_id')->on('items');

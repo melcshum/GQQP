@@ -8,18 +8,18 @@
             background: #F00;
         }
     </style>
-
+    <style>
+        .tab-pane{
+            background-color:#ffffff;
+        }
+    </style>
 </head>
 
 <body>
 @extends("layouts.app")
 
 @section('content')
-    <style>
-        .tab-pane{
-            background-color:#ffffff;
-        }
-    </style>
+
 
         <div id="page-wrapper">
             <div class="row-fluid">
@@ -36,7 +36,7 @@
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade in active" id="Platinum">
                             <center>
-                                <label id="id">Platinum</label>
+                                <h3>Platinum</h3>
                             </center>
                             <table class="table table-striped" align="left">
                                 <input type="hidden" name="userID" id="userID" value="{{Auth::user()->id}}">

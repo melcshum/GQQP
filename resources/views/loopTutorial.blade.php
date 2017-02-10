@@ -36,27 +36,59 @@
                         {{--</li>--}}
                         {{--</ol>--}}
                         <div class="col-lg-8 col-md-8 col-sm-12">
-                            <p> An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.</p>
-
-                            Syntax:
-                            The syntax of an if...else is:
+                            <p> Java programming language provides the following types of loop to handle looping requirements. Click the following links to check their detail.</p>
+                                <table border="1">
+                                    <tr>
+                                        <th>
+                                            Sr.No.
+                                        </th>
+                                        <th>
+                                            Loop & Description
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            1
+                                        </td>
+                                        <td>
+                                            <p>while loop</p>
+                                            <p>Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            2
+                                        </td>
+                                        <td>
+                                            <p>for loop</p>
+                                            <p>Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            3
+                                        </td>
+                                        <td>
+                                            <p>do...while loop</p>
+                                            <p>Like a while statement, except that it tests the condition at the end of the loop body.</p>
+                                        </td>
+                                    </tr>
+                                </table><br>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    Example
+                                    Syntax
                                 </div>
                                 <div class="panel-body">
-                        <pre>if(Boolean_expression){
-    //Executes when the Boolean expression is true
-}else{
-    //Executes when the Boolean expression is false
+                                    <pre>for(declaration : expression) {
+   // Statements
 }</pre>
                                 </div>
                             </div>
-                            If the boolean expression evaluates to true, then the if block of code will be executed, otherwise else block of code will be executed.
+
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="panel-body">
-                                <img class="img-responsive" src="../images/if.png" alt="">
+                                <img class="img-responsive" src="../images/loop_architecture.jpg" alt="">
                                 <div class="panel-footer">
                                     Flow Diagram
                                 </div>
@@ -70,7 +102,7 @@
                             <div class="row">
                                 <div class="col-sm-4 col-lg-4 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/320x150" alt="">
+                                        <img src="../images/Loop.png" alt="">
                                         <div class="caption">
                                             <div class="ratings">
                                                 <p class="pull-right">
@@ -91,7 +123,7 @@
 
                                 <div class="col-sm-4 col-lg-4 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/320x150" alt="">
+                                        <img src="../images/Loop.png" alt="">
                                         <div class="caption">
                                             <div class="ratings">
                                                 <p class="pull-right">
@@ -112,7 +144,7 @@
 
                                 <div class="col-sm-4 col-lg-4 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/320x150" alt="">
+                                        <img src="../images/Loop.png" alt="">
                                         <div class="caption">
                                             <div class="ratings">
                                                 <p class="pull-right">

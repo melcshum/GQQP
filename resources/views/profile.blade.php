@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+    <style type="text/css">
+        label {
+            text-align: right;
+        }​
+    </style>
     <style>
         .tab-pane{
             background-color:#ffffff;
         }
     </style>
     <div class="row">
-        <div class="col-sm-1">
-
-        </div>
-        <div class="col-sm-10">
-
 
     <div id="page-wrapper">
         <div class="row">
@@ -33,9 +33,6 @@
 
                         $loop = Auth::user()->skill->loop_point/630*100;
                         $l = (int) $loop;
-
-                        $class = Auth::user()->skill->class_point/630*100;
-                        $c = (int) $class;
 
                         $array = Auth::user()->skill->array_point/630*100;
                         $a = (int) $array;
@@ -72,20 +69,6 @@
                                 </svg> </li>
                             <!--  Item  -->
 
-                            <li data-name="Class Skill" data-percent="{{$c}}%(Lv {{Auth::user()->skill->class_level}})"> <svg viewBox="-10 -10 220 220">
-                                    <g fill="none" stroke-width="5" transform="translate(100,100)">
-                                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-                                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-                                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
-                                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
-                                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
-                                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
-                                    </g>
-                                </svg> <svg viewBox="-10 -10 220 220">
-                                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="{{Auth::user()->skill->class_point}}"></path>
-                                </svg> </li>
-                            <!--  Item  -->
-
                             <li data-name="Array Skill" data-percent="{{$a}}%(Lv {{Auth::user()->skill->array_level}})"> <svg viewBox="-10 -10 220 220">
                                     <g fill="none" stroke-width="5" transform="translate(100,100)">
                                         <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
@@ -102,7 +85,30 @@
                         </ul>
                         </div>
                     <div id="item" class="tab-pane fade">
-
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="thumbnail">
+                                <img src="./images/the-meaning-of-D.jpg" alt='Thumbnail2' class="img-thumbnail img-responsive" width="150px" height="150px"/>
+                                <div class="caption" text-align="left">
+                                    <label class="right">x {{Auth::user()->change}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="thumbnail">
+                                <img src="./images/50-50-movie_61.jpg" alt='Thumbnail2' class="img-thumbnail img-responsive" width="200px" height="200px"/>
+                                <div class="caption" text-align="left">
+                                    <label class="right">x {{Auth::user()->half}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="thumbnail">
+                                <img src="./images/hO01DAyn.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="150px" height="150px"/>
+                                <div class="caption" text-align="left">
+                                    <label class="right">x {{Auth::user()->extra}}</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,10 +144,10 @@
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <i class="fa fa-dollar fa-3x"></i>
+                                            <img src="./images/gold.ico" width="50" height="50">
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div >{{ Auth::user()->gold }}</div>
+                                            <label>{{ Auth::user()->gold }}</label>
                                             <div>Gold</div>
                                         </div>
                                     </div>
@@ -152,17 +158,13 @@
 
                         </center>
 
-                        {{--</div>--}}
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    </div>
-    <!-- /#page-wrapper -->
-    <div class="col-sm-1">
 
     </div>
+
     </div>
     <!-- /#wrapper -->
 

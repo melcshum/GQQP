@@ -88,9 +88,6 @@ return array(
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'ItemSeeder' => $baseDir . '/database/seeds/ItemSeeder.php',
     'Item_UserSeeder' => $baseDir . '/database/seeds/Item_UserSeeder.php',
-
-    'ItemUserTable' => $baseDir . '/database/migrations/2017_02_07_164920_item_user_table.php',
-
     'McQuestionSeeder' => $baseDir . '/database/seeds/McQuestionSeeder.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit_Extensions_GroupTestSuite' => $vendorDir . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
@@ -529,5 +526,6 @@ return array(
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'TutorialQuestionTable' => $baseDir . '/database/migrations/2017_02_06_152036_tutorial_question_table.php',
+    'UserSeeder' => $baseDir . '/database/seeds/UserSeeder.php',
     'ifTutorialSeeder' => $baseDir . '/database/seeds/ifTutorialSeeder.php',
 );
