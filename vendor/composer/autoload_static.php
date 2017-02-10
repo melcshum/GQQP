@@ -352,7 +352,15 @@ class ComposerStaticInit5c4166ee941b1e870ae5b87a875e310d
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
         'ItemSeeder' => __DIR__ . '/../..' . '/database/seeds/ItemSeeder.php',
+<<<<<<< HEAD
         'Item_UserSeeder' => __DIR__ . '/../..' . '/database/seeds/Item_UserSeeder.php',
+=======
+
+        'Item_UserSeeder' => __DIR__ . '/../..' . '/database/seeds/Item_UserSeeder.php',
+
+        'ItemUserTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_164920_item_user_table.php',
+
+>>>>>>> 61da60e4f5dd751747c49790068092210755202b
         'McQuestionSeeder' => __DIR__ . '/../..' . '/database/seeds/McQuestionSeeder.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',

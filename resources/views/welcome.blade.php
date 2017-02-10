@@ -21,7 +21,7 @@
                     </div>
                 <br>
                 <div class="col-md-6 col-sm-6 col-xs-6">
-                    <a href="intro.html">
+                    <a href="/goal">
                     <div class="thumbnail">
                         <i class="fa fa-compass" aria-hidden="true" style="font-size:60px;color:gold"></i>
                         <div class="caption">
@@ -33,7 +33,7 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
-                    <a href="intro.html">
+                    <a href="/why">
                     <div class="thumbnail">
                         <img src="./images/Test-icon.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="90px" height="90px"/>
                         <div class="caption">
