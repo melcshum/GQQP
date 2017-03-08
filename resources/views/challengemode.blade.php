@@ -126,7 +126,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Type:{!!(($mc[$playNumber]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playNumber], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="asd" class="timer" data-seconds-left={!! $mc[$playNumber]->time !!}> </label></h4></center></pre>
+                <pre class="joe"><center><h4><label>Type:{!!(($mc[$playNumber]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playNumber], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="my">0</label> : <label id="sy">0</label></h4></center></pre>
             </div>
         </div>
     </div>
@@ -245,14 +245,42 @@
     $(document).ready(function(){
         $("#hits").hide();
         $("#Next").hide();
-        var s = 60;
+        var qtime = 120;
+        var s = qtime % 60;
+        var m = qtime / 60;
+        $("#my").text(m);
+
         var id = setInterval(frame, 1000);
         function frame(){
-            if(s<=30){
+
+                if(s ==0 && m>=1) {
+                    m--;
+                    $("#my").text(m);
+                    s = 60;
+                    $("#sy").text(s);
+                }else if(s==0 && m==0){
+                    clearInterval(myVar);
+                }
+            if(qtime<=30){
                 $("#hits").show();
-            }else{
                 s--;
+                $("#sy").text(s);
+                qtime--;
             }
+            if(s >60){
+                m++;
+                $("#my").text(m);
+                s= (qtime % 60) -2;
+                s--;
+                qtime--;
+                $("#sy").text(s);
+            }
+                else{
+                s--;
+                $("#sy").text(s);
+                qtime--;
+            }
+
         }
         $('input:radio[name="ans"]').change(function(){
             $("#Next").show();
@@ -289,31 +317,35 @@
                 $('.item').eq(3).show();
             }
         });
+        $('#plustime').click(function() {
+            qtime = qtime + 30;
+            s = s + 30;
+        });
         $("#Next").click(function(event){
             $("#time").val(s);
         });
     });
 </script>
-<script src="../dist/js/jqueryTime.js"></script>
-<script src="../dist/js/jquery.simple.timer.js"></script>
-<script>
-    $(function(){
+{{--<script src="../dist/js/jqueryTime.js"></script>--}}
+{{--<script src="../dist/js/jquery.simple.timer.js"></script>--}}
+{{--<script>--}}
+    {{--$(function(){--}}
 
-        $('.timer-quick').startTimer();
-        $('.timer').startTimer({
-            onComplete: function(){
-                console.log('Complete');
-            }
-        });
+        {{--$('.timer-quick').startTimer();--}}
+        {{--$('.timer').startTimer({--}}
+            {{--onComplete: function(){--}}
+                {{--console.log('Complete');--}}
+            {{--}--}}
+        {{--});--}}
 
-        $('.timer-pause').startTimer({
-            onComplete: function(){
-                console.log('Complete');
-            },
-            allowPause: true
-        });
-    })
-</script>
+        {{--$('.timer-pause').startTimer({--}}
+            {{--onComplete: function(){--}}
+                {{--console.log('Complete');--}}
+            {{--},--}}
+            {{--allowPause: true--}}
+        {{--});--}}
+    {{--})--}}
+{{--</script>--}}
 </body>
 
 </html>

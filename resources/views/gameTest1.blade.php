@@ -253,18 +253,17 @@
                 s++;
                 rtime++;
                 $("#sy").text(s);
-                $("#time").val(s);
+                $("#time").val(rtime);
                 if(s>=60){
                     m++;
                     $("#my").text(m);
-                    s=-1;
+                    s= (rtime % 60) -2;
                     s++;
                     rtime++;
                     $("#sy").text(s);
                     $("#time").val(rtime);
                 }
             }
-
             else{
                 s++;
                 rtime++;
@@ -307,6 +306,20 @@
                 $('.item').eq(3).show();
             }
         });
+        $('#plustime').click(function(){
+            rtime= rtime + 30;
+            s = s +30;
+
+
+
+//            if(s>= 60 ){
+//                m++;
+//                s= s % 60;
+//            }
+        });
+
+
+
         //$('#plustime').click(function(){
         //
         //});
