@@ -16,9 +16,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call("McQuestionSeeder");
         $this->call("FillQuestionSeeder");
+        $this->call("ifTutorialSeeder");
         $this->call("ItemSeeder");
         $this->call("UserSeeder");
-        $this->call("SkillSeeder");
         $this->call("Item_UserSeeder");
+        $this->call("SkillSeeder");
     }
 }

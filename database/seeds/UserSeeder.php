@@ -71,7 +71,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('123456'),
                 'created_at' => '2017-02-09 01:16:46',
                 'updated_at' => '2017-02-09 01:16:46',
-                'knowledge' => '5420',
+                'knowledge' => '100',
                 'gold' => '6520',
             ],
 
@@ -80,7 +80,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('123456'),
                 'created_at' => '2017-02-09 01:16:46',
                 'updated_at' => '2017-02-09 01:16:46',
-                'knowledge' => '4330',
+                'knowledge' => '100',
                 'gold' => '5490',
             ],
 

@@ -44,6 +44,22 @@ Route::post('ifTutorialQuestion', 'TutorialController@show');
 
 Route::resource('challenge','ChallengeController');
 Route::post('challenge','ChallengeController@challenge');
+
+Route::resource('challengeFill','ChallengeFillController');
+Route::post('challengeFill','ChallengeFillController@challenge');
+
+Route::get('/ranking', 'UserController@rank');
+
+Route::get('/goal', function(){
+    return view('goal');
+});
+
+Route::get('/why', function(){
+    return view('why');
+});
+
+Route::get('/ranking', 'UserController@rank');
+
 //Route::get('/gameTest', function () {
 //    return view('gameTest');
 //});
@@ -84,9 +100,7 @@ Route::get('/tutorial/conditional', function () {
     return view('ifTutorual');
 });
 
-Route::get('/ranking', function () {
-    return view('ranking');
-});
+Route::get('/ranking', 'UserController@rank');
 
 Route::get('/tutorial', function(){
     return view('tutorialMenu');
@@ -100,6 +114,10 @@ Route::get('/tutorial/loop', function(){
     return view('loopTutorial');
 });
 
+
+Route::get('/shop', 'ItemController@index');
+Route::post('/shop', 'ItemController@exchangeItem');
+
 Route::get('/shop', 'ItemController@show');
 
 Route::get('/goal', function(){
@@ -109,3 +127,4 @@ Route::get('/goal', function(){
 Route::get('/why', function(){
     return view('why');
 });
+

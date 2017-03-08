@@ -159,7 +159,7 @@
     <div class="container">
 
         <div id="Mainp"class="row">
-            <h3><label>{!! Form::label('question_num', $playQuestionNum+1) !!}</label>/20</h3>
+            <h3><label>{!! Form::label('question_num', $playQuestionNum+1) !!}</label>/2</h3>
             <div id="Test123" class="col-md-12 col-sm-12 col-xs-12">
             <div id="Question" class="col-md-4 col-sm-4 col-xs-4">
                 <h2>Question</h2>
@@ -204,66 +204,11 @@
         <ul class="nav" id="side-menu">
 
             <li>
-                <a href="#" class="btn" style="float: left;">01</a>
+                <a href="" class="btn" style="float: left;">01</a>
             </li>
 
             <li>
-                <a href="q2.html" class="btn " style="float: left;">02</a>
-            </li>
-            <li>
-                <a href="q3.html" class="btn" style="float: left;">03</a>
-            </li>
-
-            <li>
-                <a href="q4.html" class="btn" style="float: left;">04</a>
-            </li>
-            <li>
-                <a href="q5.html" class="btn" style="float: left;">05</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">06</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">07</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">08</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">09</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">10</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">11</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">12</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">13</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">14</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">15</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">16</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">17</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">18</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">19</a>
-            </li>
-            <li>
-                <a href="#" class="btn" style="float: left;">20</a>
+                <a href="" class="btn " style="float: left;">02</a>
             </li>
             <li>
                 <p align="right"><input type="submit" name="skip" id="skip" class="btn btn-warning" value="Skip"></p>

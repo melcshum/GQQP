@@ -1,3 +1,4 @@
+
 <style type="text/css">
     .thumbnail{
         width:300px;

@@ -70,7 +70,7 @@
                         <div class="row">
                             <div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="http://placehold.it/320x150" alt="">
+                                    <img class="img-responsive" src="../images/if_else.png" alt="">
                                     <div class="caption">
                                         <div class="ratings">
                                             <p class="pull-right">
@@ -83,14 +83,14 @@
                                         </p>
                                         <h4>Practice 1
                                         </h4>
-                                        <p><input type="submit" name="1" id="1" class="btn btn-primary" value="Play"></p>
+                                        <p><input type="submit" name="1" id="1" class="btn btn-primary" style="float: right;" value="Play"></p>
                                         <p></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="http://placehold.it/320x150" alt="">
+                                    <img class="img-responsive" src="../images/if_else.png" alt="">
                                     <div class="caption">
                                         <div class="ratings">
                                             <p class="pull-right">
@@ -103,7 +103,7 @@
                                         </p>
                                         <h4>Practice 2
                                         </h4>
-                                        <p><input type="submit" name="2" id="2" class="btn btn-primary" value="Play"></p>
+                                        <p><input type="submit" name="2" id="2" class="btn btn-primary" style="float: right;" value="Play"></p>
                                         <p></p>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@
 
                             <div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="http://placehold.it/320x150" alt="">
+                                    <img class="img-responsive" src="../images/if_else.png" alt="">
                                     <div class="caption">
                                         <div class="ratings">
                                             <p class="pull-right">
@@ -124,7 +124,7 @@
                                         </p>
                                         <h4>Practice 3
                                         </h4>
-                                        <p><input type="submit" name="3" id="3" class="btn btn-primary" value="Play"></p>
+                                        <p><input type="submit" name="3" id="3" class="btn btn-primary" style="float: right;" value="Play"></p>
                                         <p></p>
                                     </div>
                                 </div>
