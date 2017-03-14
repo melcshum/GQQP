@@ -118,7 +118,6 @@ Route::get('/tutorial/loop', function(){
 Route::get('/shop', 'ItemController@index');
 Route::post('/shop', 'ItemController@exchangeItem');
 
-Route::get('/shop', 'ItemController@show');
 
 Route::get('/goal', function(){
    return view('goal');

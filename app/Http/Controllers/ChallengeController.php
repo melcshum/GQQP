@@ -27,11 +27,9 @@ class ChallengeController extends Controller
     }
     public function challenge (Request $request)
     {
-        $playNumber = $request->input('question_num');
+        $playNumber = $request->input('question_num')+1;
         $mc = Mcquestion::all();
-        if ($playNumber >= count($mc)) {
-            dd(Session::get('challenge'));
-        }
+
 
         if (Input::get('next')) {
             $mc = Mcquestion::all();//get MCquestion database
@@ -47,10 +45,29 @@ class ChallengeController extends Controller
                 $knowledge = ($mc[$playNumber]['attributes']['knowledge']);
                 $totalgold = $totalgold + $gold;
                 $totalknowledge = $totalknowledge + $knowledge;
-                $totalquestiondetail[$playNumber-1] = ['Question' => $playNumber, 'Result' => 'True', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
+                $totalquestiondetail[$playNumber] = ['Question' => $playNumber+1, 'Result' => 'True', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
                 Session::push('challenge', $totalquestiondetail);
+                $playNumber++;
+                if($this->checkEnd($playNumber)) {
+                    dd(Session::get('challenge'));
+                }
+                return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
+
+            }else{
+                $gold = ($mc[$playNumber]['attributes']['gold']);
+                $knowledge = ($mc[$playNumber]['attributes']['knowledge']);
+                $totalgold = $totalgold + $gold;
+                $totalquestiondetail[$playNumber] = ['Question' => $playNumber+1, 'Result' => 'False', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
+                Session::push('challenge', $totalquestiondetail);
+                $playNumber++;
+                if($this->checkEnd($playNumber)) {
+                    dd(Session::get('challenge'));
+                }
                 return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
             }
+
+
+
 //            else{
 //                $gold = 0;
 //                $knowledge = 0;
@@ -64,18 +81,25 @@ class ChallengeController extends Controller
 //            }
 
         }
-//        if(Input::get('skip')){
-//            $playAns = 'skip';
-//            $gold = 0;
-//            $knowledge = 0;
-//            $totalgold = $request->input('totalgold');
-//            $totalknowledge = $request->input('totalknowledge');
-//            $totalgold += $gold;
-//            $totalknowledge += $knowledge;
-//            $playNumber = $request->input('question_num')-1;
-//            $totalquestiondetail[$playNumber -1]=['Question' => 4 ,'Result' => '<i>skip</i>','Gold' =>$gold,'Knowledge'=>$knowledge,'Finish Time' =>0];
-//            Session::push('challenge',$totalquestiondetail);
-//        }
+        if(Input::get('skip')){
+            $playAns = 'skip';
+            $gold = 0;
+            $knowledge = 0;
+            $totalgold = $request->input('totalgold');
+            $totalknowledge = $request->input('totalknowledge');
+            $totalgold += $gold;
+            $totalknowledge += $knowledge;
+            $playNumber = $request->input('question_num');
+            $totalquestiondetail[$playNumber]=['Question' => $playNumber+1 ,'Result' => '<i>skip</i>','Gold' =>$gold,'Knowledge'=>$knowledge,'Finish Time' =>0];
+            Session::push('challenge',$totalquestiondetail);
+            $playNumber++;
+            if($this->checkEnd($playNumber)) {
+                dd(Session::get('challenge'));
+            }
+            return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
+        }
+
+
 
 
     }
@@ -89,4 +113,15 @@ class ChallengeController extends Controller
         }
         return $bool;
     }
+    public function checkEnd($playNumber){
+        $End = "";
+        $mc = Mcquestion::all();
+        if ($playNumber >= count($mc)) {
+            $End = True;
+        }else {
+            $End = False;
+        }
+//
+        return $End;
+        }
 }

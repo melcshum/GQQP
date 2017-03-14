@@ -126,7 +126,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Type:{!!(($mc[$playNumber]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playNumber], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="my">0</label> : <label id="sy">0</label></h4></center></pre>
+                <pre class="joe"><center><h4><label>Type:{!!(($mc[$playNumber]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playNumber], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="my">0</label>:<label id="sy">0</label></h4></center></pre>
             </div>
         </div>
     </div>
@@ -179,19 +179,19 @@
                     {!!(($mc[$playNumber]->program))!!}
                     <table id="Mc">
                         {!! Form::open(array('action' => 'ChallengeController@challenge','method' => 'post')) !!}
-                        <input type="hidden" name="question_num" value={!! $playNumber+1!!}>
+                        <input type="hidden" name="question_num" value={!! $playNumber!!}>
                         <input type="hidden" id='time' name="time" value='0'>
                         <input type="hidden" id='qtime' name="qtime" value={!! $mc[$playNumber]->time !!}>
                         <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playNumber]->question_ans !!}>
                         <input type="hidden" id='questionType' name="questionType" value={!! $mc[$playNumber]->type !!}>
                         <tr>
                             <td>
-                                <p class="item"><input type="radio" id='a' name="ans" value="a"/>a.{!!(array_get($mc[$playNumber], 'attributes.mc_ans1'))!!}</p>
-                                <p class="item"><input type="radio" id='b' name="ans" value="b"/>b.{!!(array_get($mc[$playNumber], 'attributes.mc_ans2'))!!}</p>
+                                <p><input class="item" type="radio" id='a' name="ans" value="a"/>a.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans1'))!!}</span></p>
+                                <p><input class="item" type="radio" id='b' name="ans" value="b"/>b.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans2'))!!}</span></p>
                             </td>
                             <td>
-                                <p class="item"><input type="radio" id='c' name="ans" value="c"/>c.{!!(array_get($mc[$playNumber], 'attributes.mc_ans3'))!!}</p>
-                                <p class="item"><input type="radio" id='d' name="ans" value="d"/>d.{!!(array_get($mc[$playNumber], 'attributes.mc_ans4'))!!}</p>
+                                <p><input class="item" type="radio" id='c' name="ans" value="c"/>c.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans3'))!!}</span></p>
+                                <p><input class="item" type="radio" id='d' name="ans" value="d"/>d.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans4'))!!}</span></p>
                             </td>
                         </tr>
                     </table>
@@ -288,18 +288,28 @@
         $('#fivefive').click(function(){
             var donthint = $("#trueAns").val();
             var random = Math.floor(Math.random() * $('.item').length);
+            var ansfive1 = ($('.queenie').eq(0).html());
+            var ansfive2 = ($('.queenie').eq(1).html());
+            var ansfive3 = ($('.queenie').eq(2).html());
+            var ansfive4 = ($('.queenie').eq(3).html());
+            var i;
+            var randomnum = [];
             if(donthint=='a'){
-                while(random==0) {
-                    var random = Math.floor(Math.random() * $('.item').length);
-                }
-                $('.item').hide().eq(random).show();
-                $('.item').eq(0).show();
+                for(i = 0;i < 2;i++) {
+                    random = 0;
+                    while (random == 0 ) {
+                        var random = Math.floor(Math.random() * $('.item').length);
+                    }
+                    $('.item').hide().eq(random).show();
+                    var ansfive = ($('.queenie').eq(random).html());
+                    $('.item').eq(1).show();
             }elseif(donthint=='b')
             {
                 while(random==1) {
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
+                var ansfive = ($('.queenie').eq(random).html());
                 $('.item').eq(1).show();
             }elseif(donthint=='c')
             {
@@ -307,6 +317,7 @@
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
+                var ansfive = ($('.queenie').eq(random).html());
                 $('.item').eq(2).show();
             }elseif(donthint=='d')
             {
@@ -314,6 +325,7 @@
                     var random = Math.floor(Math.random() * $('.item').length);
                 }
                 $('.item').hide().eq(random).show();
+                var ansfive = ($('.queenie').eq(random).html());
                 $('.item').eq(3).show();
             }
         });

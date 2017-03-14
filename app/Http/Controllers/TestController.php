@@ -144,7 +144,6 @@ class TestController extends Controller
         for($i=0;$i<count($totalquestionresult);$i++){
             $totaltime+=$totalquestionresult[$i][$i]['Finish Time'];
         }
-        dd(Session::get('abc'));
         return view ('Result', compact('totalquestionresult','totalgold','totaltime'));
     }
 
