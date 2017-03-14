@@ -295,7 +295,6 @@
             var i;
             var randomnum = [];
             if(donthint=='a'){
-                for(i = 0;i < 2;i++) {
                     random = 0;
                     while (random == 0 ) {
                         var random = Math.floor(Math.random() * $('.item').length);
