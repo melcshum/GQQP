@@ -49,7 +49,7 @@ class ChallengeController extends Controller
                 Session::push('challenge', $totalquestiondetail);
                 $playNumber++;
                 if($this->checkEnd($playNumber)) {
-                    dd(Session::get('challenge'));
+                    return view ($this->goPage());
                 }
                 return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
 
@@ -94,7 +94,7 @@ class ChallengeController extends Controller
             Session::push('challenge',$totalquestiondetail);
             $playNumber++;
             if($this->checkEnd($playNumber)) {
-                dd(Session::get('challenge'));
+                $this->goPage();
             }
             return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
         }
@@ -124,4 +124,8 @@ class ChallengeController extends Controller
 //
         return $End;
         }
+
+    public function goPage(){
+        return ("gotoFill");
+    }
 }

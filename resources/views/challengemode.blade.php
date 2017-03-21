@@ -57,6 +57,11 @@
         }
         #Mc{
             width: 80%;
+            empty-row: show;
+            table-border: 0px;
+        }
+        #hset{
+            width: 50%;
         }
 
     </style>
@@ -177,7 +182,7 @@
                 <div id="Answer" class="col-md-8 col-sm-8 col-xs-8">
                     <h2>Answer</h2>
                     {!!(($mc[$playNumber]->program))!!}
-                    <table id="Mc">
+                    <table id="Mc" class="table table-bordered">
                         {!! Form::open(array('action' => 'ChallengeController@challenge','method' => 'post')) !!}
                         <input type="hidden" name="question_num" value={!! $playNumber!!}>
                         <input type="hidden" id='time' name="time" value='0'>
@@ -185,13 +190,19 @@
                         <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playNumber]->question_ans !!}>
                         <input type="hidden" id='questionType' name="questionType" value={!! $mc[$playNumber]->type !!}>
                         <tr>
-                            <td>
-                                <p><input class="item" type="radio" id='a' name="ans" value="a"/>a.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans1'))!!}</span></p>
-                                <p><input class="item" type="radio" id='b' name="ans" value="b"/>b.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans2'))!!}</span></p>
+                            <td id ="hset">
+                                <p class="item"><input type="radio" id='a' name="ans" value="a"/>a.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans1'))!!}</span></p>
                             </td>
-                            <td>
-                                <p><input class="item" type="radio" id='c' name="ans" value="c"/>c.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans3'))!!}</span></p>
-                                <p><input class="item" type="radio" id='d' name="ans" value="d"/>d.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans4'))!!}</span></p>
+                            <td id ="hset">
+                                <p class="item"><input type="radio" id='b' name="ans" value="b"/>b.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans2'))!!}</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id ="hset2">
+                                <p class="item"><input type="radio" id='c' name="ans" value="c"/>c.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans3'))!!}</span></p>
+                            </td>
+                            <td id ="hset2">
+                                <p class="item"><input type="radio" id='d' name="ans" value="d"/>d.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans4'))!!}</span></p>
                             </td>
                         </tr>
                     </table>
@@ -243,6 +254,9 @@
 <script type="text/javascript" src="../js/jquery-1.6.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
+        var high = $("#hset").height();
+        $('#hset').css( "height", high );
+        $('#hset2').css( "height", high );
         $("#hits").hide();
         $("#Next").hide();
         var qtime = 120;
@@ -301,7 +315,7 @@
                     }
                     $('.item').hide().eq(random).show();
                     var ansfive = ($('.queenie').eq(random).html());
-                    $('.item').eq(1).show();
+                    $('.item').eq(0).show();
             }elseif(donthint=='b')
             {
                 while(random==1) {
@@ -327,6 +341,8 @@
                 var ansfive = ($('.queenie').eq(random).html());
                 $('.item').eq(3).show();
             }
+            $('#hset').css( "height", high );
+            $('#hset2').css( "height", high );
         });
         $('#plustime').click(function() {
             qtime = qtime + 30;
