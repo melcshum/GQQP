@@ -117,6 +117,10 @@ Route::get('/tutorial/loop', function(){
 
 Route::get('/shop', 'ItemController@index');
 Route::post('/shop', 'ItemController@exchangeItem');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f22ce4ad997abd071a94ae0688eb9b2f6577b62
 
 Route::get('/goal', function(){
    return view('goal');

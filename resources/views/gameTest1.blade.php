@@ -125,7 +125,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(($mc[$playQuestionNum]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="my">0</label> : <label id="sy">0</label>     </h4></center></pre>
+                <pre class="joe"><center><h4><label>Total Gold:<u>{!!$totalgold!!}</u></label>    <label>Type:{!!(($mc[$playQuestionNum]->question_type))!!}</label>    <label>Level:<u>{!!(array_get($mc[$playQuestionNum], 'attributes.question_level'))!!}</u></label>    <label>Timer: </label><label id="my">0</label>:<label id="sy">0</label>     </h4></center></pre>
             </div>
         </div>
     </div>
@@ -185,12 +185,12 @@
                     <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playQuestionNum]->question_ans !!}>
                     <tr>
                         <td>
-                            <p class="item"><input type="radio" id='a' name="ans" value="a"/>a.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>
-                            <p class="item"><input type="radio" id='b' name="ans" value="b"/>b.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</p>
+                            <p><input class="item" type="radio" id='a' name="ans" value="a"/>a.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>
+                            <p><input class="item" type="radio" id='b' name="ans" value="b"/>b.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</p>
                         </td>
                         <td>
-                            <p class="item"><input type="radio" id='c' name="ans" value="c"/>c.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</p>
-                            <p class="item"><input type="radio" id='d' name="ans" value="d"/>d.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</p>
+                            <p><input class="item" type="radio" id='c' name="ans" value="c"/>c.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</p>
+                            <p><input class="item" type="radio" id='d' name="ans" value="d"/>d.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</p>
                         </td>
                     </tr>
                 </table>
@@ -253,18 +253,17 @@
                 s++;
                 rtime++;
                 $("#sy").text(s);
-                $("#time").val(s);
+                $("#time").val(rtime);
                 if(s>=60){
                     m++;
                     $("#my").text(m);
-                    s=-1;
+                    s= (rtime % 60) -2;
                     s++;
                     rtime++;
                     $("#sy").text(s);
                     $("#time").val(rtime);
                 }
             }
-
             else{
                 s++;
                 rtime++;
@@ -307,6 +306,20 @@
                 $('.item').eq(3).show();
             }
         });
+        $('#plustime').click(function(){
+            rtime= rtime + 30;
+            s = s +30;
+
+
+
+//            if(s>= 60 ){
+//                m++;
+//                s= s % 60;
+//            }
+        });
+
+
+
         //$('#plustime').click(function(){
         //
         //});
