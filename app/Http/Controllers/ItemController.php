@@ -47,12 +47,13 @@ class ItemController extends Controller
                 return redirect::to('shop')->with('message', 'Not Enough Gold');
             }
         }
-        elseif ($itemid == 2){
+        
+        elseif($itemid == 2){
             if($gold >= 1000){
                 $half += 1;
-                $gold -= 1000;
+                $gold -= 500;
                 DB::table('users')->where('id', $userId)->update(['gold' => $gold]);
-                DB::table('users')->where('id', $userId)->update(['change' => $half]);
+                DB::table('users')->where('id', $userId)->update(['half' => $half]);
                 return redirect::to('shop');
             }
             else{

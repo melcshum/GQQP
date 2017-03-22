@@ -40,7 +40,7 @@ Route::resource('gameTest','TestController');
 Route::post('gameTest', 'TestController@result');
 
 Route::resource('ifTutorialQuestion','TutorialController');
-Route::post('ifTutorialQuestion', 'TutorialController@show');
+Route::post('ifTutorialQuestion', 'TutorialController@index');
 
 Route::resource('challenge','ChallengeController');
 Route::post('challenge','ChallengeController@challenge');
@@ -114,11 +114,9 @@ Route::get('/tutorial/loop', function(){
     return view('loopTutorial');
 });
 
-<<<<<<< HEAD
+
 Route::get('/shop', 'ItemController@index');
 Route::post('/shop', 'ItemController@exchangeItem');
-=======
-Route::get('/shop', 'ItemController@show');
 
 Route::get('/goal', function(){
    return view('goal');
@@ -127,4 +125,4 @@ Route::get('/goal', function(){
 Route::get('/why', function(){
     return view('why');
 });
->>>>>>> 61da60e4f5dd751747c49790068092210755202b
+
