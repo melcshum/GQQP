@@ -40,7 +40,7 @@ Route::resource('gameTest','TestController');
 Route::post('gameTest', 'TestController@result');
 
 Route::resource('ifTutorialQuestion','TutorialController');
-Route::post('ifTutorialQuestion', 'TutorialController@index');
+Route::post('ifTutorialQuestion', 'TutorialController@show');
 
 Route::resource('challenge','ChallengeController');
 Route::post('challenge','ChallengeController@challenge');
