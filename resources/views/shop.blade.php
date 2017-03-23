@@ -78,9 +78,9 @@
                     {{ csrf_field() }}
                 <table border="1" width="100%">
                     <tr >
-                        <th align="center">Item name</th>
-                        <th align="center">Item description</th>
-                        <th align="center">Cost</th>
+                        <td align="center"><b>Item name</b></td>
+                        <td align="center">Item description</td>
+                        <td align="center">Cost</td>
                     </tr>
 
                     <input type="hidden" name="itemId" id="itemId" value="">
@@ -88,7 +88,7 @@
                     <tr>
 
                             <h5><td align="center"><button class="btn btn-info">Change Question</button></td>
-                                <td align="center">&nbsp(user can displace to another question in Challenge Mode)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                                <td align="center">&nbsp(user can change to another question in Challenge Mode)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
                                 <td align="center" ><button id="buy1" name="buy1" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="1">
                                 <span class="showPoint"><img src="./images/gold.ico" width="40"> &nbspx &nbsp500</span>
                                 <span class="redeem">Redeem now!</span>
@@ -100,7 +100,7 @@
                     <tr>
 
                             <h5><td align="center"><button class="btn btn-info">50/50</button></td>
-                                <td align="center">&nbsp(user can filter 2 incorrecct answer in  Challenge Mode <b>(Multiple Choice Only)</b>)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                                <td align="center">&nbsp(user can filter 2 incorrect answers in Challenge Mode <b>(Multiple Choice Only)</b>)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
                                 <td align="center"><button id="buy2" name="buy2" class="btn btn-danger" data-toggle="modal" data-target="#myModal2" value="2">
                                 <span class="showPoint"><img src="./images/gold.ico" width="40"> x 1000</span>
                                 <span class="redeem">Redeem now!</span>
