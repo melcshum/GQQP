@@ -156,4 +156,8 @@ class TestController extends Controller
         //$project->update($input);
         return 'nice';
     }
+    public function checkAjax(Resquest $request){
+        if(Response::ajax())
+            return'OK';
+    }
 }

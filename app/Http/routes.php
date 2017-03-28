@@ -38,6 +38,7 @@ Route::get('/playMenu', function () {
 });
 Route::resource('gameTest','TestController');
 Route::post('gameTest', 'TestController@result');
+Route::post('gameTestC', 'TestController@checkAjax');
 
 Route::resource('ifTutorialQuestion','TutorialController');
 Route::post('ifTutorialQuestion', 'TutorialController@show');

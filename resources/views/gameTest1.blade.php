@@ -133,7 +133,7 @@
     <table border="1" align="right">
         <tr>
             <td>
-                <img src="./images/the-meaning-of-D.jpg">
+                <img id ='changeQ' src="./images/the-meaning-of-D.jpg">
             </td>
             <td>
                 x1
@@ -317,6 +317,18 @@
 //                s= s % 60;
 //            }
         });
+        $('#changeQ').click(function() {
+            $.ajax({
+                type:"POST",
+                url: "gameTestC",
+                data: "test",
+                success:function(data){
+                    alert(data);
+                }
+            })
+        });
+
+
 
 
 
