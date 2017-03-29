@@ -167,8 +167,4 @@ class TestController extends Controller
 //        return json_encode($semester);
 
     }
-
-    public function goPage(){
-        return ("gotoFill");
-    }
 }
