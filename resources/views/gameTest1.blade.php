@@ -88,7 +88,7 @@
 </head>
 
 <body>
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <div id="wrapper">
 
     <!-- Navigation -->
@@ -180,7 +180,7 @@
                     {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
                     <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
                     <input type="hidden" id='time' name="time" value='0'>
-                    <input type="hidden"  name="totalgold" value={!! $totalgold !!}>
+                    <input type="hidden" name="totalgold" value={!! $totalgold !!}>
                     <input type="hidden" id='qtime' name="qtime" value={!! $mc[$playQuestionNum]->time !!}>
                     <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playQuestionNum]->question_ans !!}>
                     <tr>
@@ -321,17 +321,22 @@
             $.ajax({
                 type:"POST",
                 url: "gameTestC",
-                data: "test",
+                data: {sem : "test"},
                 success:function(data){
-                    alert(data);
+                    console.log(data);
+                    alert(data['question_id']);
+                    $('#hits').val(data['question_id']);
+                    alert($('#hits').val());
+
                 }
             })
         });
 
-
-
-
-
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         //$('#plustime').click(function(){
         //
         //});
@@ -358,8 +363,7 @@
         });
     });
 </script>-->
-<script src="../dist/js/jqueryTime.js"></script>
-<script src="../dist/js/jquery.simple.timer.js"></script>
+
 <script>
     $(function(){
 

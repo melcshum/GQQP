@@ -137,8 +137,4 @@ class ChallengeController extends Controller
 //
         return $End;
         }
-
-    public function goPage(){
-        return ("gotoFill");
-    }
 }
