@@ -79,8 +79,8 @@
                 <table border="1" width="100%">
                     <tr >
                         <td align="center"><b>Item name</b></td>
-                        <td align="center">Item description</td>
-                        <td align="center">Cost</td>
+                        <td align="center"><b>Item description</b></td>
+                        <td align="center"><b>Cost</b></td>
                     </tr>
 
                     <input type="hidden" name="itemId" id="itemId" value="">
