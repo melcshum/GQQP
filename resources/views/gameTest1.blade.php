@@ -61,6 +61,53 @@
 
     </style>
 
+    <style>
+.item {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]:checked + label>button {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px #090;
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type=radio] + label>button {
+  border: 1px dashed #444;
+  width: 150px;
+  height: 50px;
+  transition: 500ms all;
+}
+
+input[type=radio]:checked + label>button {
+  transform: 
+    rotateZ(0deg) 
+    rotateX(0deg);
+}
+
+/*
+ | //lea.verou.me/css3patterns
+ | Because white bgs are boring.
+*/
+html {
+  background-color: #fff;
+  background-size: 100% 1.2em;
+  background-image: 
+    linear-gradient(
+      90deg, 
+      transparent 79px, 
+      #abced4 79px, 
+      #abced4 81px, 
+      transparent 81px
+    ),
+    linear-gradient(
+      #eee .1em, 
+      transparent .1em
+    );
+}
+</style>
+
     <title>Learning Java |FYP</title>
 
     <!-- Bootstrap Core CSS -->
@@ -88,7 +135,7 @@
 </head>
 
 <body>
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <div id="wrapper">
 
     <!-- Navigation -->
@@ -133,7 +180,7 @@
     <table border="1" align="right">
         <tr>
             <td>
-                <img src="./images/the-meaning-of-D.jpg">
+                <img id ='changeQ' src="./images/the-meaning-of-D.jpg">
             </td>
             <td>
                 x1
@@ -180,18 +227,19 @@
                     {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
                     <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
                     <input type="hidden" id='time' name="time" value='0'>
-                    <input type="hidden"  name="totalgold" value={!! $totalgold !!}>
+                    <input type="hidden" name="totalgold" value={!! $totalgold !!}>
                     <input type="hidden" id='qtime' name="qtime" value={!! $mc[$playQuestionNum]->time !!}>
                     <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playQuestionNum]->question_ans !!}>
                     <tr>
                         <td>
-                            <p><input class="item" type="radio" id='a' name="ans" value="a"/>a.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</p>
-                            <p><input class="item" type="radio" id='b' name="ans" value="b"/>b.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</p>
+                            <p><input class="item" type="radio" id='a' name="ans" value="a"/><label for="a"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</button></label></p>
+                            <p><input class="item" type="radio" id='b' name="ans" value="b"/><label for="b"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</button></label></p>
                         </td>
                         <td>
-                            <p><input class="item" type="radio" id='c' name="ans" value="c"/>c.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</p>
-                            <p><input class="item" type="radio" id='d' name="ans" value="d"/>d.{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</p>
+                            <p><input class="item" type="radio" id='c' name="ans" value="c"/><label for="c"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</button></label></p>
+                            <p><input class="item" type="radio" id='d' name="ans" value="d"/><label for="d"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</button></label></p>
                         </td>
+              
                     </tr>
                 </table>
                 <p id="test"align="right" valign="bottom"><input type="submit" id="Next" name="next" class="btn btn-primary" value="Next"></p>
@@ -317,9 +365,26 @@
 //                s= s % 60;
 //            }
         });
+        $('#changeQ').click(function() {
+            $.ajax({
+                type:"POST",
+                url: "gameTestC",
+                data: {sem : "test"},
+                success:function(data){
+                    console.log(data);
+                    alert(data['question_id']);
+                    $('#hits').val(data['question_id']);
+                    alert($('#hits').val());
 
+                }
+            })
+        });
 
-
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         //$('#plustime').click(function(){
         //
         //});
@@ -346,8 +411,7 @@
         });
     });
 </script>-->
-<script src="../dist/js/jqueryTime.js"></script>
-<script src="../dist/js/jquery.simple.timer.js"></script>
+
 <script>
     $(function(){
 

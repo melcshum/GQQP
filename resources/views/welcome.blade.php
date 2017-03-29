@@ -96,10 +96,14 @@
                     </center>
     <!----------------- Login View -------------------------->
                 @else
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/tutorial">
                         <div class="thumbnail"><br>
-                            <div class=''><div class=''><font color="#003D79"> <img src="./images/tutorial.png" width="120" height="120"><i class="" aria-hidden="true" style="font-size:60px;"></i></font></div></div>
+                            <div class=''><font color="#003D79"> <img src="./images/tutorial.png" name="tutorial" width="120" height="120"><i class="" aria-hidden="true" style="font-size:60px;"></i></font></div>
                             <div class="caption">
                                 <font color="#003D79"><h3>Tutorial Note</h3></font>
                                 <font color="#003D79"><p>You can view tutorial and do pratice here</p></font>
@@ -110,7 +114,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/playMenu">
                         <div class="thumbnail"><br>
-                            <font color="#01814A"><img src="./images/playgame.png" width="120" height="130"><i class="" aria-hidden="true" style="font-size:60px;"></i></font>
+                            <font color="#01814A"><img src="./images/playgame.png" width="120" height="130" name="playgame"><i class="" aria-hidden="true" style="font-size:60px;"></i></font>
                                 <font color="#01814A"><h3>Play game</h3></font>
                                     <font color="#01814A"><p>You can play game with different topics here</p></font>
                                         <font color="#01814A"><p>You can get gold here.</p></font>
@@ -121,7 +125,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/rules">
                         <div class="thumbnail"><br>
-                            <font color="#CE0000"><img src="./images/challenge.png" width="150" height="120"><i class="" aria-hidden="true" style="font-size:60px;"></i></font>
+                            <font color="#CE0000"><img src="./images/challenge.png" width="150" height="120" name="challenge"><i class="" aria-hidden="true" style="font-size:60px;"></i></font>
                             <div class="caption">
                                 <font color="#CE0000"><h3>Challenge</h3></font>
                                 <font color="#CE0000"><p>You can play challenging game here</p></font>
@@ -156,7 +160,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/ranking">
                         <div class="thumbnail"><br>
-                            <img src="./images/ranking.png" width="120" height="120"><i class="" aria-hidden="true" style="font-size:60px;"></i>
+                            <img src="./images/ranking.png" width="120" height="120" name="ranking"><i class="" aria-hidden="true" style="font-size:60px;"></i>
                             <div class="caption">
                                 <h3>Ranking</h3>
                                 <p>You can view the ranking here</p>
@@ -167,7 +171,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/profile">
                             <div class="thumbnail"><br>
-                                <img src="./images/profile.png" width="120" height="120"><i class="" aria-hidden="true" style="font-size:60px;"></i>
+                                <img src="./images/profile.png" width="120" height="120" name="profile"><i class="" aria-hidden="true" style="font-size:60px;"></i>
                                 <div class="caption">
                                     <h3>Profile</h3>
                                     <p>You can view the profile here</p>
@@ -179,7 +183,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <a href="/shop">
                             <div class="thumbnail"><br>
-                                <img src="./images/shop-icon.png" width="120" height="120"><i class="" aria-hidden="true" style="font-size:60px;"></i>
+                                <img src="./images/shop-icon.png" width="120" height="120" name="shop"><i class="" aria-hidden="true" style="font-size:60px;"></i>
                                 <div class="caption">
                                     <h3>Shop</h3>
                                     <p>You can use gold to buy items to use in the game here</p>
@@ -192,6 +196,136 @@
         </div>
         <!-- /.row -->
     </div>
+
+<!-- tutorial -->
+<script>
+
+$(function(){
+  $('img[name=tutorial]').on('mousemove',function(){
+    $('img[name=tutorial]').addClass('animated bounce infinite');
+});
+});
+
+</script>
+
+<script>
+
+$(function(){
+  $('img[name=tutorial]').on('mouseleave',function(){
+    $('img[name=tutorial]').removeClass('animated bounce infinite');
+
+});
+});
+
+</script>
+
+<!-- playgame -->
+<script>
+
+$(function(){
+  $('img[name=playgame]').on('mousemove',function(){
+    $('img[name=playgame]').addClass('animated flash infinite');
+});
+});
+
+</script>
+
+<script>
+
+$(function(){
+  $('img[name=playgame]').on('mouseleave',function(){
+    $('img[name=playgame]').removeClass('animated flash infinite');
+
+});
+});
+
+</script>
+
+<!-- challenge -->
+<script>
+
+$(function(){
+  $('img[name=challenge]').on('mousemove',function(){
+    $('img[name=challenge]').addClass('animated shake infinite');
+});
+});
+
+</script>
+
+<script>
+
+$(function(){
+  $('img[name=challenge]').on('mouseleave',function(){
+    $('img[name=challenge]').removeClass('animated shake infinite');
+
+});
+});
+
+</script>
+<!-- ranking -->
+<script>
+
+$(function(){
+  $('img[name=ranking]').on('mousemove',function(){
+    $('img[name=ranking]').addClass('animated swing infinite');
+});
+});
+
+</script>
+
+<script>
+
+$(function(){
+  $('img[name=ranking]').on('mouseleave',function(){
+    $('img[name=ranking]').removeClass('animated swing infinite');
+
+});
+});
+
+</script>
+<!-- profile -->
+<script>
+
+$(function(){
+  $('img[name=profile]').on('mousemove',function(){
+    $('img[name=profile]').addClass('animated wobble infinite');
+});
+});
+
+</script>
+
+<script>
+
+$(function(){
+  $('img[name=profile]').on('mouseleave',function(){
+    $('img[name=profile]').removeClass('animated wobble infinite');
+
+});
+});
+
+</script>
+<!-- shop -->
+<script>
+
+$(function(){
+  $('img[name=shop]').on('mousemove',function(){
+    $('img[name=shop]').addClass('animated rubberBand infinite');
+});
+});
+
+</script>
+
+<script>
+
+$(function(){
+  $('img[name=shop]').on('mouseleave',function(){
+    $('img[name=shop]').removeClass('animated rubberBand infinite');
+
+});
+});
+
+</script>
+
 @endsection
 
 <style type="text/css">
@@ -378,3 +512,8 @@
   100% { -o-transform: rotate(0deg); }
 }
 </style>  
+
+
+
+
+

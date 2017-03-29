@@ -39,6 +39,9 @@ Route::get('/playMenu', function () {
 Route::resource('gameTest','TestController');
 Route::post('gameTest', 'TestController@result');
 
+Route::resource('gameTestC','TestController@checkAjax');
+Route::post('gameTestC', 'TestController@checkAjax');
+
 Route::resource('ifTutorialQuestion','TutorialController');
 Route::post('ifTutorialQuestion', 'TutorialController@show');
 
@@ -113,7 +116,6 @@ Route::get('/tutorial/array', function(){
 Route::get('/tutorial/loop', function(){
     return view('loopTutorial');
 });
-
 
 Route::get('/shop', 'ItemController@index');
 Route::post('/shop', 'ItemController@exchangeItem');

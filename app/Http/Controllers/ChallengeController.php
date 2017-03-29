@@ -27,7 +27,7 @@ class ChallengeController extends Controller
     }
     public function challenge (Request $request)
     {
-        $playNumber = $request->input('question_num')+1;
+        $playNumber = $request->input('question_num') + 1;
         $mc = Mcquestion::all();
 
 
@@ -45,27 +45,26 @@ class ChallengeController extends Controller
                 $knowledge = ($mc[$playNumber]['attributes']['knowledge']);
                 $totalgold = $totalgold + $gold;
                 $totalknowledge = $totalknowledge + $knowledge;
-                $totalquestiondetail[$playNumber] = ['Question' => $playNumber+1, 'Result' => 'True', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
+                $totalquestiondetail[$playNumber] = ['Question' => $playNumber + 1, 'Result' => 'True', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
                 Session::push('challenge', $totalquestiondetail);
                 $playNumber++;
-                if($this->checkEnd($playNumber)) {
-                    return view ($this->goPage());
+                if ($this->checkEnd($playNumber)) {
+                    return view($this->goPage());
                 }
                 return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
 
-            }else{
+            } else {
                 $gold = ($mc[$playNumber]['attributes']['gold']);
                 $knowledge = ($mc[$playNumber]['attributes']['knowledge']);
                 $totalgold = $totalgold + $gold;
-                $totalquestiondetail[$playNumber] = ['Question' => $playNumber+1, 'Result' => 'False', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
+                $totalquestiondetail[$playNumber] = ['Question' => $playNumber + 1, 'Result' => 'False', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => $UserTime];
                 Session::push('challenge', $totalquestiondetail);
                 $playNumber++;
-                if($this->checkEnd($playNumber)) {
-                    dd(Session::get('challenge'));
+                if ($this->checkEnd($playNumber)) {
+                    return view($this->goPage());
                 }
                 return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
             }
-
 
 
 //            else{
@@ -81,7 +80,7 @@ class ChallengeController extends Controller
 //            }
 
         }
-        if(Input::get('skip')){
+        if (Input::get('skip')) {
             $playAns = 'skip';
             $gold = 0;
             $knowledge = 0;
@@ -90,18 +89,32 @@ class ChallengeController extends Controller
             $totalgold += $gold;
             $totalknowledge += $knowledge;
             $playNumber = $request->input('question_num');
-            $totalquestiondetail[$playNumber]=['Question' => $playNumber+1 ,'Result' => '<i>skip</i>','Gold' =>$gold,'Knowledge'=>$knowledge,'Finish Time' =>0];
-            Session::push('challenge',$totalquestiondetail);
+            $totalquestiondetail[$playNumber] = ['Question' => $playNumber + 1, 'Result' => '<i>skip</i>', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => 0];
+            Session::push('challenge', $totalquestiondetail);
             $playNumber++;
-            if($this->checkEnd($playNumber)) {
-                $this->goPage();
+            if ($this->checkEnd($playNumber)) {
+                return view($this->goPage());
             }
             return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
         }
+        if ($request->input('qtime') <= 0) {
+            $gold = 0;
+            $knowledge = 0;
+            $totalgold = $request->input('totalgold');
+            $totalknowledge = $request->input('totalknowledge');
+            $totalgold += $gold;
+            $totalknowledge += $knowledge;
+            $playNumber = $request->input('question_num');
+            $totalquestiondetail[$playNumber] = ['Question' => $playNumber + 1, 'Result' => '<i>time out</i>', 'Gold' => $gold, 'Knowledge' => $knowledge, 'Finish Time' => 0];
+            Session::push('challenge', $totalquestiondetail);
+            $playNumber++;
+            if ($this->checkEnd($playNumber)) {
+                return view($this->goPage());
+            }
 
+            return view('challengemode', compact('mc', 'totalgold', 'totalknowledge', 'playNumber'));
 
-
-
+        }
     }
 
     public function checkTureFlase($playAns, $trueAns){

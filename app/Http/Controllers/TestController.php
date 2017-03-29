@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Http\Response;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Mcquestion;
@@ -155,5 +157,14 @@ class TestController extends Controller
            ->update(array('gold'=>$gold));
         //$project->update($input);
         return 'nice';
+    }
+    public function checkAjax(Request $request){
+//       return "abc";
+        $mc = $this->mc;
+        return ($mc[0]);
+//        $semester = Input::get('sem');
+//
+//        return json_encode($semester);
+
     }
 }
