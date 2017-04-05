@@ -33,6 +33,7 @@ class TutorialController extends Controller
             return view('MctutorialResult', compact('message', 'tureAns','playQuestionNum','playAns','iftutorial','userAns','turntotAns'));
         }
         else {
+            //dd(Input::get('1'));
             $tutquestion = 0;
             if (Input::get('1')) {
                 $tutquestion = 0;

@@ -48,6 +48,9 @@ Route::post('ifTutorialQuestion', 'TutorialController@show');
 Route::resource('challenge','ChallengeController');
 Route::post('challenge','ChallengeController@challenge');
 
+Route::resource('challengeMCChange','ChallengeController@checkAjax');
+Route::post('challengeMCChange', 'ChallengeController@checkAjax');
+
 Route::resource('challengeFill','ChallengeFillController');
 Route::post('challengeFill','ChallengeFillController@challenge');
 
