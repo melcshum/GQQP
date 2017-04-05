@@ -87,7 +87,7 @@
                     <div id="item" class="tab-pane fade">
                         <div class="col-md-3 col-sm-3 col-xs-3">
                             <div class="thumbnail">
-                                <img src="./images/the-meaning-of-D.jpg" alt='Thumbnail2' class="img-thumbnail img-responsive" width="150px" height="150px"/>
+                                <img src="./images/changeQuestion.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="150px" height="150px"/>
                                 <div class="caption" text-align="left">
                                     <label class="right">x {{Auth::user()->change}}</label>
                                 </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3">
                             <div class="thumbnail">
-                                <img src="./images/50-50-movie_61.jpg" alt='Thumbnail2' class="img-thumbnail img-responsive" width="200px" height="200px"/>
+                                <img src="./images/50-50-movie_61.jpg" alt='Thumbnail2' class="img-thumbnail img-responsive" width="150px" height="150px"/>
                                 <div class="caption" text-align="left">
                                     <label class="right">x {{Auth::user()->half}}</label>
                                 </div>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3">
                             <div class="thumbnail">
-                                <img src="./images/hO01DAyn.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="150px" height="150px"/>
+                                <img src="./images/extraTime.png" alt='Thumbnail2' class="img-thumbnail img-responsive" width="250px" height="250px"/>
                                 <div class="caption" text-align="left">
                                     <label class="right">x {{Auth::user()->extra}}</label>
                                 </div>
