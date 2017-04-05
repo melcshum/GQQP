@@ -16,6 +16,7 @@ class TutorialController extends Controller
 
 
     public function show(Request $request){
+        //dd(Input::get('1'));  // do check number of question
         if(Input::get('next')){
             $playAns = $request->input('tutans');
             $playQuestionNum = $request->input('numQ');
