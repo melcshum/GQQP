@@ -62,6 +62,7 @@
     </style>
 
     <style>
+
 .item {
   position: absolute;
   left: -9999px;
@@ -76,7 +77,7 @@ input[type=radio]:checked + label>button {
 input[type=radio] + label>button {
   border: 1px dashed #444;
   width: 150px;
-  height: 50px;
+  height: 80px;
   transition: 500ms all;
 }
 
@@ -180,7 +181,7 @@ html {
     <table border="1" align="right">
         <tr>
             <td>
-                <img id ='changeQ' src="./images/the-meaning-of-D.jpg">
+                <img id ='changeQ' src="./images/changeQuestion.png" width="50" height="50">
             </td>
             <td>
                 x1
@@ -188,7 +189,7 @@ html {
         </tr>
         <tr>
             <td>
-                <img id='fivefive' src="./images/50-50-movie_61.jpg">
+                <img id='fivefive' src="./images/50-50-movie_61.jpg" width="50" height="50">
             </td>
             <td>
                 x1
@@ -196,7 +197,7 @@ html {
         </tr>
         <tr>
             <td>
-                <img id="plustime" src="./images/hO01DAyn.png">
+                <img id="plustime" src="./images/extraTime.png"  width="50" height="50">
             </td>
             <td>
                 x1
@@ -223,7 +224,7 @@ html {
             <div id="Answer" class="col-md-8 col-sm-8 col-xs-8">
                 <h2>Answer</h2>
                 {!!(array_get($mc[$playQuestionNum], 'attributes.program'))!!}
-                <table id="Mc">
+                <table id="Mc" border="0" width="100%">
                     {!! Form::open(array('action' => 'TestController@result','method' => 'post')) !!}
                     <input type="hidden" name="question_num" value={!! $playQuestionNum+1!!}>
                     <input type="hidden" id='time' name="time" value='0'>
@@ -231,13 +232,13 @@ html {
                     <input type="hidden" id='qtime' name="qtime" value={!! $mc[$playQuestionNum]->time !!}>
                     <input type="hidden" id='trueAns' name="trueAns" value={!! $mc[$playQuestionNum]->question_ans !!}>
                     <tr>
-                        <td>
-                            <p><input class="item" type="radio" id='a' name="ans" value="a"/><label for="a"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</button></label></p>
-                            <p><input class="item" type="radio" id='b' name="ans" value="b"/><label for="b"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</button></label></p>
+                        <td align="right">
+                            <p><input class="item" type="radio" id='a' name="ans" value="a"/><label for="a"><button type="button" >{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans1'))!!}</button></label></p>
+                            <p><input class="item" type="radio" id='b' name="ans" value="b"/><label for="b"><button type="button" >{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans2'))!!}</button></label></p>
                         </td>
-                        <td>
-                            <p><input class="item" type="radio" id='c' name="ans" value="c"/><label for="c"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</button></label></p>
-                            <p><input class="item" type="radio" id='d' name="ans" value="d"/><label for="d"><button type="button">{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</button></label></p>
+                        <td align="right">
+                            <p><input class="item" type="radio" id='c' name="ans" value="c"/><label for="c"><button type="button" >{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans3'))!!}</button></label></p>
+                            <p><input class="item" type="radio" id='d' name="ans" value="d"/><label for="d"><button type="button" >{!!(array_get($mc[$playQuestionNum], 'attributes.mc_ans4'))!!}</button></label></p>
                         </td>
               
                     </tr>
