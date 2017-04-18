@@ -374,8 +374,8 @@ html {
                 success:function(data){
                     console.log(data);
                     alert(data['question_id']);
-                    $('#hits').val(data['question_id']);
-                    alert($('#hits').val());
+                    $('#hits').text(data['question_id']);
+                    alert($('#hits').text());
 
                 }
             })

@@ -16,6 +16,7 @@ class TutorialController extends Controller
 
 
     public function show(Request $request){
+        //dd(Input::get('1'));  // do check number of question
         if(Input::get('next')){
             $playAns = $request->input('tutans');
             $playQuestionNum = $request->input('numQ');
@@ -32,6 +33,7 @@ class TutorialController extends Controller
             return view('MctutorialResult', compact('message', 'tureAns','playQuestionNum','playAns','iftutorial','userAns','turntotAns'));
         }
         else {
+            //dd(Input::get('1'));
             $tutquestion = 0;
             if (Input::get('1')) {
                 $tutquestion = 0;

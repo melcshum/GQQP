@@ -94,7 +94,7 @@
 
 
 <body>
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <div id="wrapper">
 
     <!-- Navigation -->
@@ -139,26 +139,26 @@
     <table border="1" align="right">
         <tr>
             <td>
-                <img src="./images/changeQuestion.png" width="50" height="50">
+                <img id ='changeQ' src="./images/changeQuestion.png" width="50" height="50">
             </td>
             <td>
-                x1
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img id='fivefive' src="./images/50-50-movie_61.jpg">
-            </td>
-            <td>
-                x1
+                x<span>{!! Auth::user()->change !!}</span>
             </td>
         </tr>
         <tr>
             <td>
-                <img id="plustime" src="./images/extraTime.png">
+                <img id='fivefive' src="./images/50-50-movie_61.jpg" width="50" height="50">
             </td>
             <td>
-                x1
+                x<span>{!! Auth::user()->half !!}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="plustime" src="./images/extraTime.png" width="50" height="50">
+            </td>
+            <td>
+                x<span>{!! Auth::user()->extra !!}</span>
             </td>
         </tr>
     </table>
@@ -191,18 +191,18 @@
                         <input type="hidden" id='questionType' name="questionType" value={!! $mc[$playNumber]->type !!}>
                         <tr>
                             <td id ="hset">
-                                <p class="item"><input type="radio" id='a' name="ans" value="a"/>a.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans1'))!!}</span></p>
+                                <p class="item"><input type="radio" id='a' name="ans" value="a"/>a.<span class="queenie"><span id="MCA">{!!(array_get($mc[$playNumber], 'attributes.mc_ans1'))!!}</span></span></p>
                             </td>
                             <td id ="hset">
-                                <p class="item"><input type="radio" id='b' name="ans" value="b"/>b.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans2'))!!}</span></p>
+                                <p class="item"><input type="radio" id='b' name="ans" value="b"/>b.<span class="queenie"><span id="MCB">{!!(array_get($mc[$playNumber], 'attributes.mc_ans2'))!!}</span></span></p>
                             </td>
                         </tr>
                         <tr>
                             <td id ="hset2">
-                                <p class="item"><input type="radio" id='c' name="ans" value="c"/>c.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans3'))!!}</span></p>
+                                <p class="item"><input type="radio" id='c' name="ans" value="c"/>c.<span class="queenie"><span id="MCC">{!!(array_get($mc[$playNumber], 'attributes.mc_ans3'))!!}</span></span></p>
                             </td>
                             <td id ="hset2">
-                                <p class="item"><input type="radio" id='d' name="ans" value="d"/>d.<span class="queenie">{!!(array_get($mc[$playNumber], 'attributes.mc_ans4'))!!}</span></p>
+                                <p class="item"><input type="radio" id='d' name="ans" value="d"/>d.<span class="queenie"><span id="MCD">{!!(array_get($mc[$playNumber], 'attributes.mc_ans4'))!!}</span></span></p>
                             </td>
                         </tr>
                     </table>
@@ -350,6 +350,29 @@
         });
         $("#Next").click(function(event){
             $("#time").val(s);
+        });
+        $('#changeQ').click(function() {
+            $.ajax({
+                type:"POST",
+                url: "challengeMCChange",
+                data: {sem : "asd"},
+                success:function(data){
+                    console.log(data);
+                    $('#hits').text(data['question_id']);
+                    $('#MCA').html(data['mc_ans1']);
+                    $('#MCB').html(data['mc_ans2']);
+                    $('#MCC').html(data['mc_ans3']);
+                    $('#MCD').html(data['mc_ans4']);
+                    $('#trueAns').val(data['question_ans']);
+                    $('#questionType').val(data['type']);
+                }
+            })
+        });
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
         });
     });
 </script>

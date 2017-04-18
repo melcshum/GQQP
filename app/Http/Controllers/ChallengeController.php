@@ -15,6 +15,12 @@ use Session;
 
 class ChallengeController extends Controller
 {
+    private $mc;
+    public function __construct()
+    {
+        $this->mc = McQuestion::all();
+
+    }
     public function index(){
         $playNumber = 0;
         $mc = Mcquestion::all();
@@ -140,5 +146,16 @@ class ChallengeController extends Controller
 
     public function goPage(){
         return ("gotoFill");
+    }
+
+
+    public function checkAjax(Request $request){
+//       return "abc";
+        $mc = $this->mc;
+        return ($mc[1]);
+//        $semester = Input::get('sem');
+//
+//        return json_encode($semester);
+
     }
 }
